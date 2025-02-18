@@ -56,12 +56,12 @@ a{
 a:hover{
       text-decoration:underline;
 }
-img{
-    border:5px solid #4CAF50;
-    border-radius:10px;
-    main a[href^="mailto":]{
-    color:#ff5722;
-    font-weight:bold
+.about-image{
+	width:50%
+	max-width:300px;
+	height:auto
+	display:block;
+	margin:10px auto;
 }
 		
 	
