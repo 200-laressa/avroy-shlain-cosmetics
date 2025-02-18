@@ -32,10 +32,10 @@ main{
 	margin:0 auto;
 }
 main img{
-      max-width:100%;
+      max-width:50%;
 	  height:auto;
       display:block;
-      margin:20px 0;
+      margin:10px auto;
 }
 footer{
         background-color:#333;
