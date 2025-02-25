@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sample Web Page
+        </title>
+        <!-- internal CSS -->
+        <style>
+            body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background-color#e89dce;
+}
+header{
+background-color: hsl(172, 90%, 77%);
+color:;#fff;
+text-align:center;
+}
+nav a{color:#3288f9
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+nav a;hover{
+text-decoration:underline;
+font-size:1.2em;
+}
+section{
