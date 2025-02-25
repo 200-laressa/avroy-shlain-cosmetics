@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sample Web Page
+        </title>
+        <!-- internal CSS -->
+        <style>
+            body{
+                background-color: #999;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            nav{
+                background-color: #3998db;
+                width: 10%;
+                float: left;
+                margin-top: 10px;
+            }
+            nav ul li{
+                border: solid thin #fff;
+                list-style-type: none;
+                margin: 10px;
+                padding: 5px;
+                color: #fff;
+            }
+            nav ul li:hover{
+                background-color: #fff;
+            }
+            nav ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            nav ul li a:hover{
+                color:#612b1b;
+            }
+            nav ul li a:visited{
+                color: #000;
+            }
+            header{
+                margin-left: 12%;
+                margin-top: 2%;
+                min-height: 50px;
+            }
+            header section#top{
+                width: 55%;
+                background-color: #612b1b;
+                margin-right: 2%;
+                float: left;
+                height: 50px;
+            }
+            header section#btm{
+                background-color: #612b1b;
+                width: 43%;
+                float: left;
+                height: 50px;
+            }
+            article{
+                width: 45%;
+                background-color: #293b1d;
+                margin-left: 2%;
+                margin-top: 2%;
+                float: left;
+                margin-bottom: 2%;
+                min-height: 150px;
+                color: #fff;
+                padding: 15px;
+                border-radius: 25px;
+            }
+            article img{
+                float: left;
+                margin-right:  10px;
+                border-radius: 15px;
+                box-shadow: 3px 3px 5px #999;
+            }
+            article h1{ color: #f00;}
+            aside{
+                background-color: #948c4d;
+                width: 40%;
+                float: right;
+                margin-top: 2%;
+            }
+            aside section{
+                background-color: #f00;
+                margin-bottom: 2%;
+                height: 50px;
+            }
+            footer{
+                clear: both;
+                border-top: solid 3px #000;
+            }
+            footer p{
+                float: left;
+            }
+            footer span{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="https://www.w3schools.com">Contact Us</a></li>
+            </ul>
+        </nav>
+        <header>
+            <section id="top">Logo Goes Here</section>
+            <section id="btm">Slogan Goes Here</section>
+        </header>
+        <article>
+            <img src="" width="150px" height="150px" />
+            <h1>This is the Article</h1>
+            <p>
+                Vivamus condimentum tellus turpis, ac commodo ligula finibus ac. Nunc convallis sem ac lobortis porta. Integer nec mattis lectus. Mauris ac diam a eros auctor dignissim et nec arcu. Curabitur interdum, ante vitae ullamcorper cursus, diam sem scelerisque risus, a lacinia ante orci ut dui. Donec fermentum varius dui, vel semper risus aliquet in. Donec ut sapien vitae orci blandit mollis at in urna. Ut pulvinar tincidunt egestas. Phasellus at turpis velit. Sed pretium lectus diam, non porta enim bibendum nec. Nullam sodales, ipsum eu facilisis ullamcorper, leo magna rutrum eros, nec tempor lectus turpis ac ex. Vestibulum ut risus suscipit, rhoncus quam vitae, tempus leo. Nunc non ornare mi. Mauris accumsan dignissim turpis, venenatis vulputate lorem. Etiam odio purus, tempor sed sapien in, finibus laoreet ex.
+            </p>
+        </article>
+        <aside>
+            <section id="top">Section 1: Top</section>
+            <section id="btm">Section 2: Bottom</section>
+        </aside>
+        <footer>
+            <p>Copyrights &copy;. All rights reserved.</p>
+            <span>Follow Us: F  |  X   |   Y   |   L</span>
+        </footer>
+    </body>
+</html>
