@@ -4,58 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Signup - Glow with Avroy Shlain</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Elegant & Cute Styling */
+        body {
+            background-color: #ffe6f2; /* Soft pink */
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            background-color: #d63384 !important; /* Hot pink */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            padding: 25px;
+        }
+
+        h2 {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 25px;
+            border: 2px solid #ff99cc;
+        }
+
+        .btn-custom {
+            background: #ff66b2;
+            border-radius: 25px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #ff3385;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #d63384;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header with Navigation Bar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Our website</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="signup.html">Signup</a>
-                        </li>
-						 
-			    <li class="nav-item">
-                             <a class="nav-link" href="add_to_cart.html">Your shopping cart</a>
-	
-                        </li>
-
-                    </ul>
-                </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Glow With Avroy Shlain</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="signup.html">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="add_to_cart.html">Your Shopping Cart</a></li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Signup Form -->
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-md-6">
-                <div class="card p-4 shadow-sm">
-                    <h2 class="text-center mb-4">Create an Account</h2>
-                    <form id="signup-form" action="submit_signup.php" method="POST">
+                <div class="card">
+                    <h2 class="text-center">Create an Account</h2>
+                    <form id="signup-form">
                         <div class="mb-3">
                             <label for="name" class="form-label">Full Name</label>
                             <input type="text" id="name" name="name" class="form-control" required>
@@ -66,48 +121,66 @@
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3 password-container">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" id="password" name="password" class="form-control" required>
+                            <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3 password-container">
                             <label for="confirm-password" class="form-label">Confirm Password</label>
                             <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                            <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                        <button type="submit" class="btn btn-custom w-100">Sign Up</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
+    <footer>
+        <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script>
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+
         document.getElementById('signup-form').addEventListener('submit', function (event) {
-            event.preventDefault();  // Prevent the form from submitting immediately
+            event.preventDefault();
 
             // Get the input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
-            // Check if passwords match
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return; // Stop the form submission if passwords don't match
+            // Simple validation
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
             }
 
-            // If everything is fine, submit the form
-            alert('Signup successful!');
-            // You can uncomment the next line if you're ready to actually submit the form:
-            // event.target.submit();
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            alert('Signup successful! 🎉 Welcome, ' + name + '!');
         });
     </script>
 </body>
-
 </html>
