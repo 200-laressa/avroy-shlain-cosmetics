@@ -1,91 +1,145 @@
-<DOCTYPE! HTML>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	  <title>About Me-Avroy shlain Beauty Advisor</title>
-	     <link rel="stylesheet" href="style.css"><!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Avroy Shlain Beauty Advisor</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-	
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Elegant & Cute Styling */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff0f6; /* Soft pink background */
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #d63384 !important; /* Cute pink */
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #ffccdd !important;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        h1 {
+            color: #d63384;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .profile-image {
+            display: block;
+            margin: 20px auto;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #d63384;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .order-steps {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #d63384;
+        }
+
+        .facebook-embed {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #d63384;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-     <header>
-	  <h1>About Avroy Shlain</h1>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-<div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Our Website!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Signup.html">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="add_to_cart.html">Your Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<a class="navbar-brand" href="index.html">OUR WEBSITE!</a>
+    <!-- About Me Section -->
+    <div class="container">
+        <h1>About Avroy Shlain</h1>
+        <img src="avroy shlain cosmetics.jpg" alt="about-image" class="profile-image">
+        
+        <div class="card">
+            <p>Welcome to Beauty World!</p>
+            <p class="bold-black-text">
+                Hi! I'm a passionate <strong style="color: #d63384;">beauty advisor at Avroy Shlain Cosmetics</strong>, dedicated to helping you look your best.
+                With expert skincare and makeup tips, I guide clients in choosing the perfect products to enhance their natural beauty.
+                Join me on this journey of self-care and confidence!
+            </p>
+        </div>
 
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <div class="card text-center">
+            <h2 style="color:#d63384;">Order Process</h2>
+            <p class="bold-black-text">ORDER</p>
+            <p class="bold-black-text">PAY</p>
+            <p class="bold-black-text">RECEIVE</p>
+            <p class="bold-black-text">OUR ORDER POLICY</p>
+        </div>
 
-<span class="navbar-toggler-icon"></span>
+        <!-- Facebook Post Embed -->
+        <div class="facebook-embed">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0gvtJfPcbHmtUUnSrofoAVpUKFpKo11cRMirunfPqDtwwrKDzpQx9aWxZnVdKGs2Zl%26id%3D61555847150885&show_text=true&width=500" width="500" height="587" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
 
-</button>
+    <footer>
+        <p>&copy; 2025 LARESSA MOTONTO</p>
+    </footer>
 
-<div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-<ul class="navbar-nav">
-
-<li class="nav-item">
-
-<a class="nav-link" href="index.html">Home</a>
-
-</li>
-<li class="nav-item">
-
-<a class="nav-link" href="Signup.html">Signup</a>	
-</li>	
-
-<li class="nav-item">
-
-<a class="nav-link" href="about.html">About</a>
-
-</li>
-
-<li class="nav-item">
-
-<a class="nav-link" href="contact.html">Contact</a>
-
-</li>
-	</li>
-<li class="nav-item">
-
-<a class="nav-link" href="add_to_cart.html">Your shopping cart</a>
-	
-</li>
-
-
-</ul>
-
-</div>
-
-</div>
-	  </nav>
-	  </header>
-	  <main class="container my-5">
-	  <p>Welcome to Beauty World!</p>
-		  <!--profile picture-->
-		  <img src="avoy shlain cosmetics.jpg"alt="about-image" style=width:20%; max-width:100px; height:auto; display:block; margin:5px auto;">
-	 <p class="bold-black-text">
-        Hi! I'm a passionate <strong style="color: #bfa6a0;">beauty advisor at Avroy Shlain Cosmetics</strong>, dedicated to helping you look your best. With expert skincare and makeup tips, 
-        I guide clients in choosing the perfect products to enhance their natural beauty. Join me on this journey of self-care and confidence!
-    </p>
-    <p class="bold-black-text">ORDER</p>
-    <p class="bold-black-text">PAY</p>
-    <p class="bold-black-text">RECIEVE</p>
-    <p class="bold-black-text">OUR ORDER POLICY</p>
-		<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0gvtJfPcbHmtUUnSrofoAVpUKFpKo11cRMirunfPqDtwwrKDzpQx9aWxZnVdKGs2Zl%26id%3D61555847150885&show_text=true&width=500" width="500" height="587" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-	  <footer>
-	    <p>&copy;2025 LARESSA MOTONTO</p>
-	  </footer><!-- Bootstrap JS and dependencies -->
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-		  
 </body>
+
 </html>
-	  
-	  
