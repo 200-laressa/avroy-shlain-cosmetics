@@ -84,24 +84,16 @@
     <!-- Custom JavaScript -->
     <script>
         document.getElementById('signup-form').addEventListener('submit', function (event) {
-            event.preventDefault();  // Prevent the form from submitting immediately
-
-            // Get the input values
+            event.preventDefault();  
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
-            // Check if passwords match
+            
             if (password !== confirmPassword) {
                 alert('Passwords do not match!');
                 return;
             }
-
-            // If everything is fine, you can submit the form
-            // In a real scenario, this would involve an AJAX request or form submission to the server
             alert('Signup successful!');
-            // Uncomment this line to submit the form (once you're ready)
-            // event.target.submit();
-        });
     </script>
 </body>
 
