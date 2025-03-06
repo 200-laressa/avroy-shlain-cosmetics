@@ -75,6 +75,12 @@
         .item .item-name {
             font-weight: bold;
         }
+
+        .empty-cart-message {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #ff0000;
+        }
     </style>
 </head>
 
@@ -108,7 +114,6 @@
                     <form id="checkout-form">
                         <!-- Items List -->
                         <div class="item-list" id="cart-items">
-                            <h5>Your Items:</h5>
                             <!-- Dynamic items will be injected here -->
                         </div>
 
@@ -176,25 +181,30 @@
             let total = subtotal + deliveryFee;
 
             // Update the UI with the cart items and total
-            document.getElementById('cart-items').innerHTML = cartItems.map(item => `
-                <div class="item">
-                    <span class="item-name">${item.name}</span>
-                    <span>$${item.price.toFixed(2)}</span>
-                </div>
-            `).join('');
-            document.getElementById('total-amount').innerHTML = `
-                <p><strong>Subtotal:</strong> $${subtotal.toFixed(2)}</p>
-                <p><strong>Delivery:</strong> $${deliveryFee.toFixed(2)}</p>
-                <p><strong>Total Amount:</strong> $${total.toFixed(2)}</p>
-            `;
+            if (cartItems.length > 0) {
+                document.getElementById('cart-items').innerHTML = cartItems.map(item => `
+                    <div class="item">
+                        <span class="item-name">${item.name}</span>
+                        <span>$${item.price.toFixed(2)}</span>
+                    </div>
+                `).join('');
+                document.getElementById('total-amount').innerHTML = `
+                    <p><strong>Subtotal:</strong> $${subtotal.toFixed(2)}</p>
+                    <p><strong>Delivery:</strong> $${deliveryFee.toFixed(2)}</p>
+                    <p><strong>Total Amount:</strong> $${total.toFixed(2)}</p>
+                `;
+            } else {
+                document.getElementById('cart-items').innerHTML = '<p class="empty-cart-message">Your cart is empty. Please add products to the cart.</p>';
+                document.getElementById('total-amount').innerHTML = `
+                    <p><strong>Subtotal:</strong> $0.00</p>
+                    <p><strong>Delivery:</strong> $5.00</p>
+                    <p><strong>Total Amount:</strong> $5.00</p>
+                `;
+            }
         }
 
         // Get cart data from localStorage or simulate if it's not available
-        const cart = JSON.parse(localStorage.getItem('cart')) || [
-            { name: "Product 1", price: 20.00 },
-            { name: "Product 2", price: 35.00 },
-            { name: "Product 3", price: 25.00 }
-        ];
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         // Call the function to calculate and display the total
         calculateTotal(cart);
