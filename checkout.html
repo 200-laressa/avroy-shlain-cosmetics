@@ -107,27 +107,16 @@
                     <h2 class="text-center">Checkout</h2>
                     <form id="checkout-form">
                         <!-- Items List -->
-                        <div class="item-list">
+                        <div class="item-list" id="cart-items">
                             <h5>Your Items:</h5>
-                            <div class="item">
-                                <span class="item-name">Product 1</span>
-                                <span>$20.00</span>
-                            </div>
-                            <div class="item">
-                                <span class="item-name">Product 2</span>
-                                <span>$35.00</span>
-                            </div>
-                            <div class="item">
-                                <span class="item-name">Product 3</span>
-                                <span>$25.00</span>
-                            </div>
+                            <!-- Dynamic items will be injected here -->
                         </div>
 
                         <!-- Total Amount -->
-                        <div class="total-section">
-                            <p><strong>Subtotal:</strong> $80.00</p>
+                        <div class="total-section" id="total-amount">
+                            <p><strong>Subtotal:</strong> $0.00</p>
                             <p><strong>Delivery:</strong> $5.00</p>
-                            <p><strong>Total Amount:</strong> $85.00</p>
+                            <p><strong>Total Amount:</strong> $5.00</p>
                         </div>
 
                         <!-- User Information -->
@@ -177,6 +166,40 @@
 
     <!-- Custom JavaScript -->
     <script>
+        // Function to calculate the total
+        function calculateTotal(cartItems) {
+            let subtotal = 0;
+            cartItems.forEach(item => {
+                subtotal += item.price;
+            });
+            let deliveryFee = 5.00; // Flat delivery fee
+            let total = subtotal + deliveryFee;
+
+            // Update the UI with the cart items and total
+            document.getElementById('cart-items').innerHTML = cartItems.map(item => `
+                <div class="item">
+                    <span class="item-name">${item.name}</span>
+                    <span>$${item.price.toFixed(2)}</span>
+                </div>
+            `).join('');
+            document.getElementById('total-amount').innerHTML = `
+                <p><strong>Subtotal:</strong> $${subtotal.toFixed(2)}</p>
+                <p><strong>Delivery:</strong> $${deliveryFee.toFixed(2)}</p>
+                <p><strong>Total Amount:</strong> $${total.toFixed(2)}</p>
+            `;
+        }
+
+        // Get cart data from localStorage or simulate if it's not available
+        const cart = JSON.parse(localStorage.getItem('cart')) || [
+            { name: "Product 1", price: 20.00 },
+            { name: "Product 2", price: 35.00 },
+            { name: "Product 3", price: 25.00 }
+        ];
+
+        // Call the function to calculate and display the total
+        calculateTotal(cart);
+
+        // Handle the form submission
         document.getElementById('checkout-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
