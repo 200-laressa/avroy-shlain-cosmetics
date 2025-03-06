@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - My Online Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
+</head>
+<body>
+    <header class="container">
+        <h1>Shopping Cart</h1>
+        <na<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Our website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="signup.html">Signup</a>
+						</li>
+						<li class="nav-item">
+                        <a class="nav-link" href="add_to_cart.html">Your shopping cart</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+v>
+           
+    </header>
+
+    <section id="cart" class="container mt-4">
+        <h2>Your Shopping Cart</h2>
+
+        <!-- Product 1 -->
+        <div class="product mb-3">
+            <img src="product1.jpg" alt="Product 1" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 1</h3>
+                <p>$15.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 1')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product mb-3">
+            <img src="product2.jpg" alt="Product 2" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 2</h3>
+                <p>$25.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 2')">Add to Cart</button>
+            </div>
+        </div>
+		<!-- Product 3 --->
+        <div class="product mb-3">
+            <img src="product3.jpg" alt="Product 3" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 3</h3>
+                <p>$25.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 3')">Add to Cart</button>
+            </div>
+			<!-- Product 4 -->
+        <div class="product mb-3">
+            <img src="product4.jpg" alt="Product 4" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 4</h3>
+                <p>$25.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 4')">Add to Cart</button>
+            </div>
+        </div
+        <!-- Product 5 -->
+        <div class="product mb-3">
+            <img src="product5.jpg" alt="Product5" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 5</h3>
+                <p>$25.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 5')">Add to Cart</button>
+            </div>
+        <!-- Product 6 -->
+        <div class="product mb-3">
+            <img src="product6.jpg" alt="Product 6" class="img-fluid" width="200">
+            <div class="product-info">
+                <h3>Product 6</h3>
+                <p>$25.00</p>
+                <button class="btn btn-primary" onclick="addToCart('Product 6')">Add to Cart</button>
+            </div>
+        
+
+        <!-- Additional products go here... -->
+
+        <!-- Total Section -->
+        <div id="total" class="mt-4">
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+            <button id="checkout-button" class="btn btn-success">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <footer class="text-center mt-4">
+        <p>&copy; <span id="current-year"></span> Avroy Shlain Store. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+
+        let cart = [];
+        let totalPrice = 0;
+
+        function addToCart(productName) {
+            let price;
+            switch (productName) {
+                case 'Product 1':
+                    price = 15.00;
+                    break;
+                case 'Product 2':
+                    price = 25.00;
+                    break;
+                // Add other products as needed
+                default:
+                    price = 0;
+            }
+
+            cart.push({ product: productName, price: price });
+            totalPrice += price;
+
+            // Update total price on the page
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+            alert(productName + ' added to cart!');
+        }
+    </script>
+</body>
+</html>
