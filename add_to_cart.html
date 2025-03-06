@@ -3,155 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - My Online Store</title>
+    <title>Shopping Cart - Avroy Shlain</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
+
+    <style>
+        /* Elegant & Stylish Look */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff0f6;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #d63384 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffccdd !important;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #d63384;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.03);
+        }
+
+        .product img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .btn-primary {
+            background: #d63384;
+            border: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #ff66a3;
+            transform: scale(1.05);
+        }
+
+        #total {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #d63384;
+        }
+
+        #checkout-button {
+            display: block;
+            margin: 20px auto;
+            font-size: 18px;
+            padding: 10px 20px;
+            background: #28a745;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        #checkout-button:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #d63384;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff66a3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #d63384;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <header class="container">
-        <h1>Shopping Cart</h1>
-        <na<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Our website</a>
+            <a class="navbar-brand" href="index.html">Our Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-					<li class="nav-item">
-                        <a class="nav-link" href="signup.html">Signup</a>
-						</li>
-						<li class="nav-item">
-                        <a class="nav-link" href="add_to_cart.html">Your shopping cart</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="add_to_cart.html">Your Shopping Cart</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
-v>
-           
-    </header>
 
-    <section id="cart" class="container mt-4">
-        <h2>Your Shopping Cart</h2>
+    <!-- Shopping Cart Section -->
+    <div class="container">
+        <h1>Shopping Cart</h1>
 
-        <!-- Product 1 -->
-        <div class="product mb-3">
-        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Exotic-Fire-600x600-1.jpg?raw=true" width="200">
-            <div class="Light up the desire in your soul and let Exotic Fire transport you to an indulgent, dream-like place of sultry seduction.
-		    Exotic Fire is the hunger for life that will never burn out.
-		    Tease your senses with exotic top notes of Orange Blossom, Tangerine and Osmanthus, gently blended with the voluptuous heart notes of Magnolia,
-		    Tuberose and
-		    Narcissus. Capture the scent of the encounter with the base notes of Sandalwood, Amberwood and Vanilla.">
-                <h3>EXOTIC FIRE!</h3>
-                <p>$15.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 1')">Add to Cart</button>
+        <!-- Products List -->
+        <div id="cart-items">
+            <div class="product">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Exotic-Fire-600x600-1.jpg?raw=true">
+                <div class="product-info">
+                    <h3>EXOTIC FIRE</h3>
+                    <p>$15.00</p>
+                </div>
+                <button class="btn btn-primary" onclick="addToCart('EXOTIC FIRE', 15.00)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true">
+                <div class="product-info">
+                    <h3>ISARA</h3>
+                    <p>$25.00</p>
+                </div>
+                <button class="btn btn-primary" onclick="addToCart('ISARA', 25.00)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true">
+                <div class="product-info">
+                    <h3>PINK DIAMOND</h3>
+                    <p>$25.00</p>
+                </div>
+                <button class="btn btn-primary" onclick="addToCart('PINK DIAMOND', 25.00)">Add to Cart</button>
             </div>
         </div>
-
-        <!-- Product 2 -->
-        <div class="product mb-3">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true"width="200">
-            <div class="product-info">
-                <h3>ISARA!</h3>
-                <p>$25.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 2')">Add to Cart</button>
-            </div>
-        </div>
-		<!-- Product 3 --->
-        <div class="product mb-3">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/JS-600x600-2.jpg?raw=true"width="200">
-            <div class="product-info">
-                <h3>JS</h3>
-                <p>$25.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 3')">Add to Cart</button>
-            </div>
-			<!-- Product 4 -->
-        <div class="product mb-3">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Perfect.jpg?raw=true"width="200">
-            <div class="product-info">
-                <h3>PERFECT!</h3>
-                <p>$25.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 4')">Add to Cart</button>
-            </div>
-        </div
-        <!-- Product 5 -->
-        <div class="product mb-3">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Tahlita-600x600-1.jpg?raw=true"width="200">
-            <div class="product-info">
-                <h3>TALHITA SKIN CARE</h3>
-                <p>$25.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 5')">Add to Cart</button>
-            </div>
-        <!-- Product 6 -->
-        <div class="product mb-3">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true"width="200">
-            <div class="product-info">
-                <h3>PINK DIAMOND!</h3>
-                <p>$25.00</p>
-                <button class="btn btn-primary" onclick="addToCart('Product 6')">Add to Cart</button>
-            </div>
-        
-
-        <!-- Additional products go here... -->
 
         <!-- Total Section -->
-        <div id="total" class="mt-4">
+        <div id="total">
             <h3>Total: $<span id="total-price">0.00</span></h3>
             <button id="checkout-button" class="btn btn-success">Proceed to Checkout</button>
         </div>
-    </section>
+    </div>
 
-    <footer class="text-center mt-4">
+    <!-- Footer -->
+    <footer>
         <p>&copy; <span id="current-year"></span> Avroy Shlain Store. All rights reserved.</p>
         <div class="social-links">
             <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TikTok</a>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <script>
-        const currentYear = new Date().getFullYear();
-        document.getElementById('current-year').textContent = currentYear;
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        let cart = [];
         let totalPrice = 0;
 
-        function addToCart(productName) {
-            let price;
-            switch (productName) {
-                case 'Product 1':
-                    price = 15.00;
-                    break;
-                case 'Product 2':
-                    price = 25.00;
-                    break;
-                // Add other products as needed
-                default:
-                    price = 0;
-            }
-
-            cart.push({ product: productName, price: price });
+        function addToCart(productName, price) {
             totalPrice += price;
-
-            // Update total price on the page
             document.getElementById('total-price').textContent = totalPrice.toFixed(2);
             alert(productName + ' added to cart!');
         }
     </script>
+
 </body>
 </html>
