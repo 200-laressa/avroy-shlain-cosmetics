@@ -82,21 +82,6 @@
             color: #007bff; /* Neutral blue */
         }
 
-        #checkout-button {
-            display: block;
-            margin: 20px auto;
-            font-size: 18px;
-            padding: 10px 20px;
-            background: #28a745;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        #checkout-button:hover {
-            background: #218838;
-            transform: scale(1.05);
-        }
-
         footer {
             text-align: center;
             padding: 15px;
@@ -212,7 +197,7 @@
         </div>
 
         <!-- Checkout Button -->
-        <button class="btn btn-success" id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        <button class="btn btn-success" onclick="proceedToCheckout()">Proceed to Checkout</button>
     </div>
 
     <!-- Footer -->
@@ -239,8 +224,16 @@
 
             // Update cart summary
             updateCartSummary();
+        }
 
-            alert(productName + ' added to cart!');
+        // Function to proceed to checkout and redirect to payment page
+        function proceedToCheckout() {
+            if (cartItems.length === 0) {
+                alert("Your cart is empty. Please add items to your cart before proceeding to checkout.");
+            } else {
+                // Redirect to the payment page
+                window.location.href = 'pay.html'; // Redirects to payment page
+            }
         }
 
         // Update cart summary display
@@ -258,16 +251,6 @@
                         </div>
                     `;
                 });
-            }
-        }
-
-        // Handle checkout
-        function proceedToCheckout() {
-            if (cartItems.length > 0) {
-                // Redirect to the checkout page
-                window.location.href = 'checkout.html'; // Directing to the checkout page
-            } else {
-                alert('Your cart is empty!');
             }
         }
     </script>
