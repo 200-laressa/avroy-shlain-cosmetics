@@ -129,7 +129,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
                     <a href="checkout.html" class="btn btn-success">Your Shopping Cart</a>
                     <li class="nav-item"><a class="nav-link" href="pay.html">Payment</a></li>
                 </ul>
@@ -264,13 +264,8 @@
         // Handle checkout
         function proceedToCheckout() {
             if (cartItems.length > 0) {
-                // For the assignment, we just show an alert
-                alert('Proceeding to checkout!');
-                // Reset cart
-                cartItems = [];
-                totalPrice = 0;
-                document.getElementById('total-price').textContent = '0.00';
-                updateCartSummary();
+                // Redirect to the checkout page
+                window.location.href = 'checkout.html'; // Directing to the checkout page
             } else {
                 alert('Your cart is empty!');
             }
