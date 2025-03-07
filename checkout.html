@@ -11,14 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Elegant & Neutral Styling */
         body {
-            background-color: #f0f0f0; /* Light neutral color */
+            background-color: #f0f0f0;
             font-family: "Poppins", sans-serif;
         }
 
         .navbar {
-            background-color: #4CAF50 !important; /* Green */
+            background-color: #4CAF50 !important;
         }
 
         .navbar-brand {
@@ -115,7 +114,7 @@
                     <form id="checkout-form">
                         <!-- Items List -->
                         <div class="item-list" id="cart-items">
-                            <!-- Dynamic items will be injected here -->
+                            <p class="empty-cart-message">Loading your cart...</p>
                         </div>
 
                         <!-- Total Amount -->
@@ -170,63 +169,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-    <!-- Custom JavaScript -->
+    <!-- Checkout Script -->
     <script>
-        // Function to calculate the total
-        function calculateTotal(cartItems) {
+        function loadCheckout() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || {};
             let subtotal = 0;
-            cartItems.forEach(item => {
-                subtotal += item.price;
-            });
-            let deliveryFee = 5.00; // Flat delivery fee
+            let itemsHTML = '';
+
+            for (let product in cart) {
+                let item = cart[product];
+                subtotal += item.price * item.quantity;
+                itemsHTML += `<div class="item">
+                    <span class="item-name">${product} (x${item.quantity})</span>
+                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>`;
+            }
+
+            let deliveryFee = 5.00;
             let total = subtotal + deliveryFee;
 
-            // Update the UI with the cart items and total
-            if (cartItems.length > 0) {
-                document.getElementById('cart-items').innerHTML = cartItems.map(item => `
-                    <div class="item">
-                        <span class="item-name">${item.name}</span>
-                        <span>$${item.price.toFixed(2)}</span>
-                    </div>
-                `).join('');
+            if (subtotal > 0) {
+                document.getElementById('cart-items').innerHTML = itemsHTML;
                 document.getElementById('total-amount').innerHTML = `
                     <p><strong>Subtotal:</strong> $${subtotal.toFixed(2)}</p>
                     <p><strong>Delivery:</strong> $${deliveryFee.toFixed(2)}</p>
                     <p><strong>Total Amount:</strong> $${total.toFixed(2)}</p>
                 `;
             } else {
-                document.getElementById('cart-items').innerHTML = '<p class="empty-cart-message">Your cart is empty. Please add products to the cart.</p>';
-                document.getElementById('total-amount').innerHTML = `
-                    <p><strong>Subtotal:</strong> $0.00</p>
-                    <p><strong>Delivery:</strong> $5.00</p>
-                    <p><strong>Total Amount:</strong> $5.00</p>
-                `;
+                document.getElementById('cart-items').innerHTML = '<p class="empty-cart-message">Your cart is empty.</p>';
             }
         }
 
-        // Get cart data from localStorage or simulate if it's not available
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Call the function to calculate and display the total
-        calculateTotal(cart);
-
-        // Handle the form submission
-        document.getElementById('checkout-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Get the selected payment method
-            const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
-
-            if (paymentMethod === "pay-now") {
-                alert('Thank you for your payment! 🎉 You will receive your order soon.');
-            } else {
-                alert('Thank you for choosing Cash on Delivery! 🎉 Your order will be shipped to your address.');
-            }
-
-            // Redirect to the Shopping Cart page after checkout
-            window.location.href = "add_to_cart.html"; // Redirect to the shopping cart page
+        document.addEventListener("DOMContentLoaded", function () {
+            loadCheckout();
+            document.getElementById('checkout-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert("Thank you for your purchase! Your order has been placed.");
+                localStorage.removeItem('cart');
+                window.location.href = "add_to_cart.html";
+            });
         });
     </script>
+
 </body>
 
 </html>
