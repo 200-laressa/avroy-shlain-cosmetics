@@ -45,14 +45,14 @@
         .profile-image {
             display: block;
             margin: 10px auto;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid #004d40;
         }
 
-        .card {
+        .about-content {
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -60,17 +60,16 @@
             margin-top: 20px;
         }
 
-        .order-steps {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 15px;
+        .about-content h2 {
             color: #004d40;
+            font-weight: bold;
+            text-align: center;
         }
 
-        .facebook-embed {
-            text-align: center;
-            margin-top: 30px;
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -95,8 +94,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Homepage></li>
-                    <li class="nav-item"><a class="nav-link" href="Signup.html">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Homepage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <a href="checkout.html" class="btn btn-success">YourShoppingCart</a>
@@ -108,29 +107,36 @@
 
     <!-- About Section -->
     <div class="container">
-        <h1>About Avroy Shlain Cosmetics</h1>
-        <img src="avroy_shlain_cosmetics.jpg" alt="About Avroy Shlain" class="profile-image">
+        <h1>About Avroy Shlain</h1>
         
-        <div class="card">
-            <p>Welcome to Avroy Shlain Cosmetics, where beauty meets luxury. We are a global leader in skincare, cosmetics, and wellness products, offering high-quality solutions for your beauty needs.</p>
-            <p>At Avroy Shlain, we believe in empowering individuals through beauty and self-care. Our expert beauty advisors are here to guide you in selecting the right products to enhance your natural beauty and help you feel confident in your skin.</p>
-            <p>Our product range includes skincare, makeup, fragrances, and wellness products, all designed to cater to diverse needs and preferences. Whether you're looking for a new skincare routine or the perfect fragrance, we have something for everyone.</p>
-        </div>
+        <!-- Profile Image -->
+        <img src="avroy_shlain_profile.jpg" alt="Avroy Shlain" class="profile-image">
+        
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>
+                Avroy Shlain is a global leader in skincare, cosmetics, and wellness products, offering high-quality solutions for beauty and self-care. Our mission is to empower individuals through beauty by providing products that help them feel confident and radiant in their skin. With a commitment to sustainability, innovation, and quality, we continue to redefine the beauty industry worldwide.
+            </p>
 
-        <div class="card text-center">
-            <h2 style="color:#004d40;">Our Order Process</h2>
-            <p class="order-steps">ORDER</p>
-            <p class="order-steps">PAY</p>
-            <p class="order-steps">RECEIVE</p>
-            <p class="order-steps">EXPERIENCE LUXURY</p>
-        </div>
+            <h2>Our Values</h2>
+            <p>
+                At Avroy Shlain, we believe in beauty that transcends the ordinary. Our values are rooted in:
+                <ul>
+                    <li><strong>Quality</strong> - We use only the finest ingredients to create premium products.</li>
+                    <li><strong>Innovation</strong> - Our products are crafted using the latest technology and cutting-edge research.</li>
+                    <li><strong>Sustainability</strong> - We are committed to sustainable practices that protect our planet.</li>
+                    <li><strong>Empowerment</strong> - We strive to empower our customers to look and feel their best, every day.</li>
+                </ul>
+            </p>
 
-        <!-- Facebook Post Embed -->
-        <div class="facebook-embed">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0gvtJfPcbHmtUUnSrofoAVpUKFpKo11cRMirunfPqDtwwrKDzpQx9aWxZnVdKGs2Zl%26id%3D61555847150885&show_text=true&width=500" width="500" height="587" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <h2>Our Commitment to You</h2>
+            <p>
+                We understand that beauty is personal, and our team of expert beauty advisors is here to guide you in finding the right products for your skin type, preferences, and needs. Whether you are searching for skincare solutions, the perfect fragrance, or high-quality makeup, Avroy Shlain has everything to help you experience the best version of yourself.
+            </p>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Avroy Shlain Cosmetics</p>
     </footer>
