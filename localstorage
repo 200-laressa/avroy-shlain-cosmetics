@@ -1,0 +1,6 @@
+// Example of adding an item to the cart
+function addToCart(productName, price) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push({ name: productName, price: price });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
