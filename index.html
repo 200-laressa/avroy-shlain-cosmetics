@@ -37,12 +37,11 @@
         }
 .hero {
     background: url("https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/nucelle.jpg?raw=true") no-repeat center center;
-    background-size: cover; /* Ensures the image covers the full area without distorting */
+    background-size: cover; /* Ensures the image covers the area without distortion */
     background-position: center; /* Keeps the image centered */
-    width: 100%; /* Ensures full width */
-    height: 70vh; /* Adjusts the height to make it more reasonable (you can tweak this value as needed) */
-    margin: 0; /* Removes any margin */
-    padding: 0; /* Removes any padding */
+    width: 100%; /* Full width of the screen */
+    min-height: 50vh; /* Sets a minimum height (50% of the viewport height) */
+    padding: 20px 0; /* Adds some padding for spacing above and below the content */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,6 +51,14 @@
     font-weight: bold;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 768px) {
+    .hero {
+        font-size: 22px; /* Adjust font size for smaller screens */
+        min-height: 40vh; /* Make the hero smaller on mobile */
+    }
+}
+
 
 
 
