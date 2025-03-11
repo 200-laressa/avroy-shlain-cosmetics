@@ -13,12 +13,12 @@
         /* Elegant & Neutral Styling */
         body {
             font-family: "Poppins", sans-serif;
-            background: #f4f4f4;
-            color: #333;
+            background: #f8f0f5; /* Soft pink background for neutrality */
+            color: #333; /* Dark text for readability */
         }
 
         .navbar {
-            background-color: #004d40 !important;
+            background-color: #d81b60 !important; /* Pink color for navbar */
         }
 
         .navbar-brand, .nav-link {
@@ -27,7 +27,7 @@
         }
 
         .nav-link:hover {
-            color: #80cbc4 !important;
+            color: #f8a2c4 !important; /* Lighter pink on hover */
         }
 
         .container {
@@ -36,7 +36,7 @@
         }
 
         h1 {
-            color: #004d40;
+            color: #d81b60; /* Pink color for headings */
             text-align: center;
             font-weight: bold;
             margin-top: 20px;
@@ -49,20 +49,20 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid #004d40;
+            border: 5px solid #d81b60; /* Pink border around the profile image */
             max-width: 100%;
         }
 
         .about-content {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
         }
 
         .about-content h2 {
-            color: #004d40;
+            color: #d81b60;
             font-weight: bold;
             text-align: center;
         }
@@ -71,15 +71,30 @@
             font-size: 16px;
             line-height: 1.5;
             margin-bottom: 20px;
+            color: #555;
         }
 
         footer {
             text-align: center;
             padding: 15px;
-            background: #004d40;
+            background: #d81b60;
             color: white;
             font-weight: bold;
             margin-top: 20px;
+        }
+
+        .btn-pink {
+            background-color: #d81b60; /* Pink color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-pink:hover {
+            background-color: #f8a2c4; /* Lighter pink on hover */
         }
     </style>
 </head>
@@ -99,7 +114,7 @@
                     <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <a href="checkout.html" class="btn btn-success">YourShoppingCart</a>
+                    <a href="checkout.html" class="btn btn-pink">Your Shopping Cart</a>
                     <li class="nav-item"><a class="nav-link" href="pay.html">Payment</a></li>
                 </ul>
             </div>
@@ -149,5 +164,3 @@
 </body>
 
 </html>
-
-    
