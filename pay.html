@@ -113,6 +113,7 @@
             </div>
             <div id="total">
                 <h3>Total: $<span id="total-price-summary">0.00</span></h3>
+                <p>Total Quantity: <span id="total-quantity">0</span></p>
             </div>
         </div>
 
@@ -183,23 +184,26 @@
         function updateCartSummary() {
             let cartItemsSummary = document.getElementById('cart-items-summary');
             let total = 0;
+            let totalQuantity = 0; // Variable to track the total quantity of items
             cartItemsSummary.innerHTML = '';
 
             if (cartItems.length === 0) {
                 cartItemsSummary.innerHTML = `<p>Your cart is empty.</p>`;
             } else {
                 cartItems.forEach(item => {
-                    total += item.price;
+                    total += item.price * item.quantity; // Calculate total price
+                    totalQuantity += item.quantity; // Calculate total quantity
                     cartItemsSummary.innerHTML += `
                         <div class="product-summary">
-                            <p>${item.name} - $${item.price.toFixed(2)}</p>
+                            <p>${item.name} - $${item.price.toFixed(2)} x ${item.quantity}</p>
                         </div>
                     `;
                 });
             }
 
-            // Update total price
+            // Update total price and quantity
             document.getElementById('total-price-summary').textContent = total.toFixed(2);
+            document.getElementById('total-quantity').textContent = totalQuantity; // Display the total quantity
         }
 
         // Update Order Summary for Confirmation
@@ -212,9 +216,9 @@
                 orderItemsSummary.innerHTML = `<p>Your cart is empty.</p>`;
             } else {
                 cartItems.forEach(item => {
-                    total += item.price;
+                    total += item.price * item.quantity; // Calculate total price
                     orderItemsSummary.innerHTML += `
-                        <p>${item.name} - $${item.price.toFixed(2)}</p>
+                        <p>${item.name} - $${item.price.toFixed(2)} x ${item.quantity}</p>
                     `;
                 });
             }
@@ -242,11 +246,6 @@
         // Initialize Cart and Order Summaries
         updateCartSummary();
         updateOrderSummary();
-
-        // You can add items to the cart via JavaScript like this:
-        // cartItems.push({ name: 'Item Name', price: 20.00 });
-        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
     </script>
 </body>
 </html>
-
