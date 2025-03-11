@@ -95,7 +95,7 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
                     <li class="nav-item"><a class="nav-link active" href="checkout.html">Your Shopping Cart</a></li>
-                    <li class="nav-item"><a href="pay.html" class="btn btn-success">Payment</a>
+                    <li class="nav-item"><a href="pay.html" class="btn btn-success">Payment</a></li>
                 </ul>
             </div>
         </div>
@@ -176,12 +176,8 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // Dummy cart data for checkout (from previous page)
-        let cartItems = [
-            { name: 'EXOTIC FIRE', price: 15.00 },
-            { name: 'ISARA', price: 25.00 },
-            { name: 'JS', price: 25.00 }
-        ];
+        // Initialize empty cart or retrieve it from localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
         // Update Cart Summary Section
         function updateCartSummary() {
@@ -189,14 +185,18 @@
             let total = 0;
             cartItemsSummary.innerHTML = '';
 
-            cartItems.forEach(item => {
-                total += item.price;
-                cartItemsSummary.innerHTML += `
-                    <div class="product-summary">
-                        <p>${item.name} - $${item.price.toFixed(2)}</p>
-                    </div>
-                `;
-            });
+            if (cartItems.length === 0) {
+                cartItemsSummary.innerHTML = `<p>Your cart is empty.</p>`;
+            } else {
+                cartItems.forEach(item => {
+                    total += item.price;
+                    cartItemsSummary.innerHTML += `
+                        <div class="product-summary">
+                            <p>${item.name} - $${item.price.toFixed(2)}</p>
+                        </div>
+                    `;
+                });
+            }
 
             // Update total price
             document.getElementById('total-price-summary').textContent = total.toFixed(2);
@@ -208,12 +208,16 @@
             let total = 0;
             orderItemsSummary.innerHTML = '';
 
-            cartItems.forEach(item => {
-                total += item.price;
-                orderItemsSummary.innerHTML += `
-                    <p>${item.name} - $${item.price.toFixed(2)}</p>
-                `;
-            });
+            if (cartItems.length === 0) {
+                orderItemsSummary.innerHTML = `<p>Your cart is empty.</p>`;
+            } else {
+                cartItems.forEach(item => {
+                    total += item.price;
+                    orderItemsSummary.innerHTML += `
+                        <p>${item.name} - $${item.price.toFixed(2)}</p>
+                    `;
+                });
+            }
 
             // Update total price
             document.getElementById('total-price-checkout').textContent = total.toFixed(2);
@@ -238,6 +242,11 @@
         // Initialize Cart and Order Summaries
         updateCartSummary();
         updateOrderSummary();
+
+        // You can add items to the cart via JavaScript like this:
+        // cartItems.push({ name: 'Item Name', price: 20.00 });
+        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
     </script>
 </body>
 </html>
+
