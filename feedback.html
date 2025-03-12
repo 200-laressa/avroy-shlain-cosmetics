@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Avroy Shlain</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff0f6;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #d63384 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d63384;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .rating span:hover,
+        .rating span.active {
+            color: gold;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid #ff99cc;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: #d63384;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            padding: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff66a3;
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #d63384;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Our Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="add_to_cart.html">Shopping Cart</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feedback Form -->
+    <div class="container">
+        <h1>Rate Our Website & Leave Feedback</h1>
+
+        <form id="feedback-form">
+            <label for="rating">Your Rating:</label>
+            <div class="rating">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating-value" name="rating" required>
+
+            <br>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your feedback here..." required></textarea> 
+            <br><br>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+
+        <p class="message" id="success-message">Thank you for your feedback! 💖</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Avroy Shlain Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const stars = document.querySelectorAll('.rating span');
+        const ratingValue = document.getElementById('rating-value');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                let value = this.getAttribute('data-value');
+                ratingValue.value = value;
+
+                stars.forEach(s => s.classList.remove('active'));
+                for (let i = 0; i < value; i++) {
+                    stars[i].classList.add('active');
+                }
+            });
+        });
+
+        document.getElementById("feedback-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            if (ratingValue.value === "") {
+                alert("Please select a rating before submitting!");
+                return;
+            }
+
+            document.getElementById("success-message").style.display = "block"; // Show success message
+        });
+    </script>
+
+</body>
+</html>
