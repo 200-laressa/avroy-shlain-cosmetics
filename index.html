@@ -35,34 +35,33 @@
             color: #fff !important;
             font-weight: 500;
         }
-.hero {
-    background-color:#f5f5f5; /* Light green for neutrality */
-    background-size: cover; 
-    background-position: center; 
-    width: 100%; 
-    min-height: 50vh; 
-    padding: 20px 0; /* Adds some padding for spacing above and below the content */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
 
-@media (max-width: 768px) {
-    .hero {
-        font-size: 22px; 
-        min-height: 40vh; 
-    }
-}
+        /* Hero section with background image */
+        .hero {
+            background-image: url('https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/nucelle.jpg?raw=true');
+            background-size: cover; 
+            background-position: center;
+            width: 100%;
+            min-height: 50vh; /* Set to cover half of the homepage */
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
 
+        /* Responsive adjustment for smaller devices */
+        @media (max-width: 768px) {
+            .hero {
+                font-size: 22px; 
+                min-height: 40vh; /* Adjust height for mobile view */
+            }
+        }
 
-
-
-       
         .contact-btn, .shop-btn {
             background: #00796b;
             border-radius: 25px;
@@ -166,5 +165,3 @@
 
 </body>
 </html>
-
-  
