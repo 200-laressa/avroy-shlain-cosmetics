@@ -10,12 +10,12 @@
 
     <style>
         body {
-            background-color: #f0f8ff; /* Soft light blue */
+            background-color: #f0f8ff;
             font-family: "Poppins", sans-serif;
         }
 
         .navbar {
-            background-color: #4caf50 !important; /* Green */
+            background-color: #4caf50 !important;
         }
 
         .navbar-brand, .nav-link {
@@ -38,7 +38,7 @@
 
         .form-control {
             border-radius: 25px;
-            border: 2px solid #80e0a7; /* Light green */
+            border: 2px solid #80e0a7;
         }
 
         .btn-custom {
@@ -51,10 +51,18 @@
         }
 
         .btn-custom:hover {
-            background: #388e3c; /* Darker green */
+            background: #388e3c;
+        }
+
+        .password-container {
+            position: relative;
         }
 
         .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
             color: #888;
         }
@@ -70,6 +78,7 @@
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -109,14 +118,16 @@
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3 password-container">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" id="password" name="password" class="form-control" required>
+                            <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
                         </div>
 
-                        <div id="confirm-password-field" class="mb-3">
+                        <div id="confirm-password-field" class="mb-3 password-container">
                             <label for="confirm-password" class="form-label">Confirm Password</label>
                             <input type="password" id="confirm-password" name="confirm-password" class="form-control">
+                            <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
                         </div>
 
                         <button type="submit" class="btn btn-custom w-100">Sign Up</button>
@@ -185,6 +196,15 @@
 
             window.location.href = "index.html";
         });
+
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
     </script>
 
 </body>
