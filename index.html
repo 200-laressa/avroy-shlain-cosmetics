@@ -38,12 +38,11 @@
 
         .hero {
             background: url("https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/nucelle.jpg?raw=true") no-repeat center center;
-            background-size: cover;
-            height: 300px;
+            background-size: contain; /* Ensure entire image is shown */
+            height: 400px; /* Adjust height for better display */
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             color: white;
             font-size: 28px;
             font-weight: bold;
@@ -88,8 +87,10 @@
 <body>
 
     <header>
-        <h1>Welcome to Glow with Avroy Shlain Cosmetics!</h1>
-        <h2>True Beauty Shines!</h2>
+        <div class="hero">
+            <h1>Welcome to Glow with Avroy Shlain Cosmetics!</h1>
+            <h2>True Beauty Shines!</h2>
+        </div>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -110,10 +111,6 @@
         </div>
     </nav>
 
-    <div class="hero">
-        Experience the Luxury of Beauty ✨
-    </div>
-
     <main class="container my-5">
         <div class="row">
             <div class="col-md-8">
@@ -124,7 +121,7 @@
                 
                 <p>Check out our latest beauty trends and become a part of our community.</p>
                 <a href="contact.html" class="contact-btn">Contact Us</a>
-                <a href="add_to_cart.html" class="shop-btn">Shop Now</a>
+                <a href="add_to_cart.html" class="shop-btn">Shop Now</a> <!-- Directs to the shopping cart -->
             </div>
 
             <div class="col-md-4">
