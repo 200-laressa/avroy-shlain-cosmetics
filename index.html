@@ -27,12 +27,18 @@
         }
 
         .navbar-brand {
+            font-weight: bold;
             color: #fff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 500;
         }
 
         .hero {
             background: url("https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/nucelle.jpg?raw=true") no-repeat center center;
-            background-size: contain; /* Ensure entire image is shown */
+            background-size: cover; /* Ensure the image covers the entire section */
             height: 400px; /* Adjust height for better display */
             display: flex;
             align-items: center;
@@ -64,11 +70,17 @@
             border: none;
         }
 
+        .card-title {
+            color: #00796b;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
             background: #00796b;
             color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -84,7 +96,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">OUR WEBSITE!</a>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -106,7 +121,7 @@
                 
                 <p>Check out our latest beauty trends and become a part of our community.</p>
                 <a href="contact.html" class="contact-btn">Contact Us</a>
-                <a href="add_to_cart.html" class="shop-btn">Shop Now</a> <!-- This directs to the shopping cart -->
+                <a href="add_to_cart.html" class="shop-btn">Shop Now</a> <!-- Ensure this directs to the shopping cart -->
             </div>
 
             <div class="col-md-4">
@@ -132,3 +147,5 @@
 
 </body>
 </html>
+
+        
