@@ -12,6 +12,7 @@
         body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
         }
 
         body {
@@ -20,14 +21,23 @@
             color: #333;
         }
 
+        /* Remove any default margin/padding */
         header {
             margin: 0;
             padding: 0;
             background: #28a745; /* Green background */
+            position: relative; /* Ensures that it stays in place */
         }
 
         .navbar {
             background-color: #28a745 !important; /* Green navbar */
+            padding: 0; /* Remove padding from navbar */
+            margin: 0; /* Remove margin */
+            position: fixed; /* Make navbar fixed to the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; /* Ensures navbar stays above content */
         }
 
         .navbar-brand, .nav-link {
@@ -37,7 +47,7 @@
 
         .container {
             max-width: 600px;
-            margin-top: 30px;
+            margin-top: 80px; /* Add margin top to avoid content being hidden by fixed navbar */
             background: white;
             padding: 20px;
             border-radius: 10px;
