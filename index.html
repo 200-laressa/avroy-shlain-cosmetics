@@ -76,8 +76,8 @@
 
         /* Carousel Styling */
         .carousel-item img {
-            width: 100%;
-            height: 400px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
             margin: 0 auto; /* Center the images */
@@ -91,32 +91,31 @@
         /* Product Carousel Styling */
         .product-carousel-item {
             text-align: center;
-        }
-
-        .product-carousel-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
             position: relative;
         }
 
         /* "See More Products" Button Styling */
         .see-more-btn {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
             background-color: #00796b;
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            text-decoration: none;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 200px; /* Matching the image size */
+            height: 200px; /* Matching the image size */
             transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .see-more-btn:hover {
