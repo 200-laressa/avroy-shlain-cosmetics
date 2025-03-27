@@ -82,59 +82,6 @@
             border-radius: 10px;
             margin: 0 auto; /* Center the images */
         }
-
-        .carousel-inner {
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Product Carousel Styling */
-        .product-carousel-item {
-            text-align: center;
-            position: relative;
-        }
-
-        /* "See More Products" Button Styling */
-        .see-more-btn {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            background-color: #00796b;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 16px;
-            border-radius: 10px;
-            text-decoration: none;
-            width: 200px; /* Matching the image size */
-            height: 200px; /* Matching the image size */
-            transition: background-color 0.3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .see-more-btn:hover {
-            background-color: #004d40;
-        }
-
-        .see-more-btn i {
-            margin-left: 10px;
-        }
-
-        .carousel-control-prev, .carousel-control-next {
-            z-index: 10; /* Bring navigation buttons on top of images */
-        }
-
-        .buttons-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
     </style>
 </head>
 <body>
@@ -157,7 +104,7 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                     <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
                 </ul>
             </div>
         </div>
@@ -168,22 +115,13 @@
         <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="product-carousel-item">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                        <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                    </div>
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
                 </div>
                 <div class="carousel-item">
-                    <div class="product-carousel-item">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
-                        <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                    </div>
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
                 </div>
                 <div class="carousel-item">
-                    <div class="product-carousel-item">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
-                        <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                    </div>
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -196,47 +134,27 @@
             </button>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h4>Featured Products</h4>
-                <!-- Featured Products Slider -->
-                <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active product-carousel-item">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                            <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                        </div>
-                        <div class="carousel-item product-carousel-item">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
-                            <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                        </div>
-                        <div class="carousel-item product-carousel-item">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
-                            <a href="products.html" class="see-more-btn">See More Products <i class="bi bi-arrow-right-circle"></i></a>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-md-8">
                 <p>Welcome to our beautiful world of Avroy Shlain! Explore, shop, and glow with confidence.</p>
+                <h4>Featured Fragrances</h4>
                 <iframe width="260" height="260" src="https://www.youtube.com/embed/gr4z7uXovlE" title="Miss Coppelia For Her by Avroy Shlain" frameborder="0" allowfullscreen></iframe>
                 <iframe width="260" height="260" src="https://www.youtube.com/embed/kyOvGZcD98o" title="Coppelia Intense Fragrance For Her By Avroy Shlain" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-md-4 buttons-container">
+                
+                <p>Check out our latest beauty trends and become a part of our community.</p>
                 <a href="contact.html" class="contact-btn">Contact Us</a>
                 <a href="products.html" class="shop-btn">See More Products</a>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Did You Know?</h5>
+                        <p class="card-text">
+                            At Avroy Shlain, becoming a member isn't just about great skincare and beauty products—it's about unlocking the opportunity to earn profits while sharing the products you love! 💄✨
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -248,9 +166,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-    <!-- Bootstrap Icons for the arrow -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
 
 </body>
 </html>
