@@ -74,42 +74,13 @@
             font-weight: bold;
         }
 
-        /* Flexbox layout for products */
-        .product-container {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto; /* Allows horizontal scrolling */
-            scroll-snap-type: x mandatory; /* Ensures each image snaps into place */
-            -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
-            padding: 20px 0;
-            justify-content: start;
-        }
-
-        .product-card {
-            flex-shrink: 0; /* Prevents images from shrinking */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            width: 250px; /* Adjust width */
-            background-color: white;
-            scroll-snap-align: center; /* Ensures smooth centering */
-        }
-
-        .product-image {
+        /* Carousel Styling */
+        .carousel-item img {
             width: 200px;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-        }
-
-        .product-description {
-            margin-left: 20px;
-            flex: 1;
-            font-size: 14px;
-            font-weight: bold;
+            margin: 0 auto; /* Center the images */
         }
     </style>
 </head>
@@ -140,29 +111,27 @@
     </nav>
 
     <main class="container my-5">
-        <!-- Product Container -->
-        <div class="product-container" id="productSlider">
-            <div class="product-card">
-                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" class="product-image" alt="Pink Diamond">
-                <div class="product-description">
-                    <h5>Pink Diamond</h5>
-                    <p>A sparkling scent with top notes of floral green Muguet and Pear accords. Intense floral middle notes of Lily, Honeysuckle, Lily of the Valley and Rose.</p>
+        <!-- Product Slider (Carousel) -->
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
                 </div>
             </div>
-            <div class="product-card">
-                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" class="product-image" alt="JS">
-                <div class="product-description">
-                    <h5>JS</h5>
-                    <p>A woody, musky fragrance with spicy top notes of Cardamom and Coriander combined with floral middle notes like Jasmine, Rose, Ylang-Ylang and Muguet.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-image" alt="ONCE">
-                <div class="product-description">
-                    <h5>ONCE</h5>
-                    <p>She seizes the day, with top notes of Pink Peppercorn and Blackcurrant. The heart is Magnolia and Violet, with a base of Vanilla and Patchouli.</p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
         <div class="row">
@@ -197,22 +166,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-    <script>
-        // JavaScript for auto sliding of the products
-        let currentIndex = 0;
-        const products = document.getElementById("productSlider");
-
-        function autoSlide() {
-            currentIndex = (currentIndex + 1) % products.children.length;
-            products.scrollTo({
-                left: currentIndex * (products.children[0].clientWidth + 20),
-                behavior: 'smooth',
-            });
-        }
-
-        setInterval(autoSlide, 3000); // Slides every 3 seconds
-    </script>
 
 </body>
 </html>
