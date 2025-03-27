@@ -76,44 +76,31 @@
 
         /* Carousel adjustments */
         .carousel-item img {
-            width: 100%; /* Ensure the images are not too big */
-            height: auto;
-        }
-
-        .carousel-caption {
-            position: absolute;
-            bottom: 10%;
-            left: 10%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            color: white;
-            padding: 20px;
-            font-weight: bold;
-            max-width: 400px; /* Limit the width of the text box */
+            width: 200px; /* Set the image width */
+            height: 200px; /* Set the image height */
         }
 
         .carousel-item {
-            position: relative;
-        }
-
-        /* Description area */
-        .product-description {
-            font-weight: bold;
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            margin-top: 15px;
-            border-radius: 10px;
+            display: flex; /* Use flex to align items side-by-side */
+            align-items: center;
+            justify-content: space-around; /* Ensure the description and image are spaced out */
         }
 
         .carousel-item-text {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
+            gap: 20px;
+            font-weight: bold;
+            color: #333;
         }
 
         .carousel-item-text p {
             max-width: 500px;
+        }
+
+        .carousel-caption {
+            display: none; /* Hide the caption */
         }
     </style>
 </head>
@@ -149,30 +136,27 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                    <div class="carousel-caption">
-                        <h5>Pink Diamond</h5>
-                        <div class="carousel-item-text">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond" width="200" height="auto">
+                    <div class="carousel-item-text">
+                        <div>
+                            <h5>Pink Diamond</h5>
                             <p>A sparkling scent with top notes of floral green Muguet and Pear accords that create a cheerfully romantic fragrance. The intensely floral middle notes combine to form a bouquet of Lily, Honeysuckle, Lily of the Valley and Rose. This fragrance is rounded off with the freshness of Magnolia wood, Sandalwood, Cedarwood and White Musk. Pink Diamond™ will wrap you in dreams of glamorous and delightful romance.</p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
-                    <div class="carousel-caption">
-                        <h5>JS</h5>
-                        <div class="carousel-item-text">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS" width="200" height="auto">
+                    <div class="carousel-item-text">
+                        <div>
+                            <h5>JS</h5>
                             <p>A woody, musky fragrance with spicy top notes of Cardamom and Coriander combined with floral middle notes such as Jasmine, Rose, Ylang-Ylang and Muguet that dry down to reveal base notes of Patchouli, Cedarwood and Vetiver. Indulge your sense with this sensual scent for a woman of today.</p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="d-block w-100" alt="Once">
-                    <div class="carousel-caption">
-                        <h5>ONCE</h5>
-                        <div class="carousel-item-text">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="Once" width="200" height="auto">
+                    <div class="carousel-item-text">
+                        <div>
+                            <h5>ONCE</h5>
                             <p>She seizes the day, exploring a wonderful world full of beauty, charm and adventure. Her scent opens with top notes of Pink Peppercorn and Blackcurrant before settling into a heart of Magnolia and Violet then drying down to a base of Vanilla and Patchouli.</p>
                         </div>
                     </div>
