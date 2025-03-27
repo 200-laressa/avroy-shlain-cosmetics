@@ -74,33 +74,42 @@
             font-weight: bold;
         }
 
-        /* Carousel adjustments */
-        .carousel-item img {
-            width: 200px; /* Set the image width */
-            height: 200px; /* Set the image height */
+        /* Flexbox layout for products */
+        .product-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Allows horizontal scrolling */
+            scroll-snap-type: x mandatory; /* Ensures each image snaps into place */
+            -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+            padding: 20px 0;
+            justify-content: start;
         }
 
-        .carousel-item {
-            display: flex; /* Use flex to align items side-by-side */
-            align-items: center;
-            justify-content: space-around; /* Ensure the description and image are spaced out */
-        }
-
-        .carousel-item-text {
+        .product-card {
+            flex-shrink: 0; /* Prevents images from shrinking */
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            width: 250px; /* Adjust width */
+            background-color: white;
+            scroll-snap-align: center; /* Ensures smooth centering */
+        }
+
+        .product-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-description {
+            margin-left: 20px;
+            flex: 1;
+            font-size: 14px;
             font-weight: bold;
-            color: #333;
-        }
-
-        .carousel-item-text p {
-            max-width: 500px;
-        }
-
-        .carousel-caption {
-            display: none; /* Hide the caption */
         }
     </style>
 </head>
@@ -131,45 +140,29 @@
     </nav>
 
     <main class="container my-5">
-        <!-- Product Slider (Carousel) -->
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                    <div class="carousel-item-text">
-                        <div>
-                            <h5>Pink Diamond</h5>
-                            <p>A sparkling scent with top notes of floral green Muguet and Pear accords that create a cheerfully romantic fragrance. The intensely floral middle notes combine to form a bouquet of Lily, Honeysuckle, Lily of the Valley and Rose. This fragrance is rounded off with the freshness of Magnolia wood, Sandalwood, Cedarwood and White Musk. Pink Diamond™ will wrap you in dreams of glamorous and delightful romance.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
-                    <div class="carousel-item-text">
-                        <div>
-                            <h5>JS</h5>
-                            <p>A woody, musky fragrance with spicy top notes of Cardamom and Coriander combined with floral middle notes such as Jasmine, Rose, Ylang-Ylang and Muguet that dry down to reveal base notes of Patchouli, Cedarwood and Vetiver. Indulge your sense with this sensual scent for a woman of today.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="d-block w-100" alt="Once">
-                    <div class="carousel-item-text">
-                        <div>
-                            <h5>ONCE</h5>
-                            <p>She seizes the day, exploring a wonderful world full of beauty, charm and adventure. Her scent opens with top notes of Pink Peppercorn and Blackcurrant before settling into a heart of Magnolia and Violet then drying down to a base of Vanilla and Patchouli.</p>
-                        </div>
-                    </div>
+        <!-- Product Container -->
+        <div class="product-container" id="productSlider">
+            <div class="product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" class="product-image" alt="Pink Diamond">
+                <div class="product-description">
+                    <h5>Pink Diamond</h5>
+                    <p>A sparkling scent with top notes of floral green Muguet and Pear accords. Intense floral middle notes of Lily, Honeysuckle, Lily of the Valley and Rose.</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" class="product-image" alt="JS">
+                <div class="product-description">
+                    <h5>JS</h5>
+                    <p>A woody, musky fragrance with spicy top notes of Cardamom and Coriander combined with floral middle notes like Jasmine, Rose, Ylang-Ylang and Muguet.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-image" alt="ONCE">
+                <div class="product-description">
+                    <h5>ONCE</h5>
+                    <p>She seizes the day, with top notes of Pink Peppercorn and Blackcurrant. The heart is Magnolia and Violet, with a base of Vanilla and Patchouli.</p>
+                </div>
+            </div>
         </div>
 
         <div class="row">
@@ -181,7 +174,6 @@
                 
                 <p>Check out our latest beauty trends and become a part of our community.</p>
                 <a href="contact.html" class="contact-btn">Contact Us</a>
-                <!-- Removed the "Shop Now" button and added "See More Products" button -->
                 <a href="products.html" class="shop-btn">See More Products</a>
             </div>
 
@@ -205,6 +197,22 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript for auto sliding of the products
+        let currentIndex = 0;
+        const products = document.getElementById("productSlider");
+
+        function autoSlide() {
+            currentIndex = (currentIndex + 1) % products.children.length;
+            products.scrollTo({
+                left: currentIndex * (products.children[0].clientWidth + 20),
+                behavior: 'smooth',
+            });
+        }
+
+        setInterval(autoSlide, 3000); // Slides every 3 seconds
+    </script>
 
 </body>
 </html>
