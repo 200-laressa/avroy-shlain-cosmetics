@@ -8,12 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
+        /* Remove default margins/padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: "Poppins", sans-serif;
             background-color: #f8f9fa;
             color: #333;
-            margin: 0;
-            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .navbar {
@@ -25,12 +33,11 @@
             font-weight: 600;
         }
 
-        /* Header Section Styling */
+        /* Page header adjustments */
         .page-header {
             background: #e9f5ee;
-            padding: 40px 0 20px;
-            margin-top: 0; /* Remove space above */
-            margin-bottom: 30px;
+            padding: 40px 0;
+            margin-top: 0;
             border-bottom: 2px solid #28a745;
         }
 
@@ -59,13 +66,15 @@
             text-decoration: underline;
         }
 
-        /* Feedback Form Styling */
+        /* Feedback Form */
         .container {
             max-width: 800px;
             background: #ffffff;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            flex: 1;
         }
 
         h1 {
