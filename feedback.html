@@ -10,12 +10,12 @@
     <style>
         body {
             font-family: "Poppins", sans-serif;
-            background-color: #f8f9fa; /* Light background color */
+            background-color: #f8f9fa;
             color: #333;
         }
 
         .navbar {
-            background-color: #28a745 !important; /* Green navbar */
+            background-color: #28a745 !important;
         }
 
         .navbar-brand, .nav-link {
@@ -23,9 +23,40 @@
             font-weight: 600;
         }
 
+        .page-header {
+            background: #e9f5ee;
+            padding: 40px 0 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #28a745;
+        }
+
+        .header-title {
+            color: #28a745;
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .header-links {
+            text-align: center;
+        }
+
+        .header-links a {
+            margin: 0 12px;
+            color: #28a745;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: #1e7e34;
+            text-decoration: underline;
+        }
+
         .container {
             max-width: 800px;
-            margin-top: 80px; /* Spacing for fixed navbar */
             background: #ffffff;
             padding: 30px;
             border-radius: 8px;
@@ -127,6 +158,20 @@
         </div>
     </nav>
 
+    <!-- Page Header Section -->
+    <div class="page-header">
+        <div class="container">
+            <h2 class="header-title">Feedback</h2>
+            <div class="header-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="signup.html">Signup</a>
+                <a href="products.html">Products</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Feedback Form -->
     <div class="container">
         <h1>We Value Your Feedback!</h1>
@@ -173,7 +218,7 @@
 
         // Handle Feedback Form Submission
         function submitFeedback(event) {
-            event.preventDefault(); // Prevent the form from reloading the page
+            event.preventDefault();
 
             const rating = document.querySelector('input[name="rating"]:checked');
             const comments = document.getElementById('comments').value;
@@ -183,17 +228,14 @@
                 return;
             }
 
-            // Display Thank You Message
             document.getElementById('thankYouMessage').style.display = "block";
 
-            // Optionally, you could store the feedback or send it to a server via an API
             console.log("Feedback submitted:");
             console.log("Rating:", rating.value);
             console.log("Comments:", comments);
 
-            // Optionally, you can redirect the user or reset the form after submission
             setTimeout(function() {
-                window.location.href = "index.html"; // Redirect to homepage after 10 seconds
+                window.location.href = "index.html";
             }, 3000);
         }
     </script>
