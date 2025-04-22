@@ -12,6 +12,8 @@
             font-family: "Poppins", sans-serif;
             background-color: #f8f9fa;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .navbar {
@@ -23,9 +25,11 @@
             font-weight: 600;
         }
 
+        /* Header Section Styling */
         .page-header {
             background: #e9f5ee;
             padding: 40px 0 20px;
+            margin-top: 0; /* Remove space above */
             margin-bottom: 30px;
             border-bottom: 2px solid #28a745;
         }
@@ -55,6 +59,7 @@
             text-decoration: underline;
         }
 
+        /* Feedback Form Styling */
         .container {
             max-width: 800px;
             background: #ffffff;
@@ -228,12 +233,14 @@
                 return;
             }
 
+            // Display Thank You Message
             document.getElementById('thankYouMessage').style.display = "block";
 
             console.log("Feedback submitted:");
             console.log("Rating:", rating.value);
             console.log("Comments:", comments);
 
+            // Redirect to homepage after 3 seconds
             setTimeout(function() {
                 window.location.href = "index.html";
             }, 3000);
