@@ -78,10 +78,24 @@
         /* Carousel Styling */
         .carousel-item img {
             width: 100%;
-            height: 350px; /* Adjust height for a more professional look */
-            object-fit: cover;
+            height: 300px; /* Smaller height for the carousel image */
+            object-fit: contain; /* Ensures the image fits without cropping */
             border-radius: 10px;
             margin: 0 auto; /* Center the images */
+        }
+
+        /* Perfume Description Styling */
+        .carousel-description {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .carousel-description h4 {
+            font-weight: bold;
+            color: #1f9e5f;
         }
 
         /* YouTube Videos Styling */
@@ -105,11 +119,12 @@
             }
 
             .carousel-item img {
-                height: 250px; /* Adjust carousel image size for smaller screens */
+                height: 200px; /* Adjust carousel image size for smaller screens */
             }
 
-            .col-md-8 {
-                margin-bottom: 20px;
+            .carousel-description {
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
 
@@ -171,27 +186,16 @@
                 </button>
             </div>
 
-            <!-- Right Side Carousel (Existing) -->
-            <div id="productCarousel" class="col-md-6 carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="JS">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
-                    </div>
+            <!-- Right Side Description -->
+            <div class="col-md-6">
+                <div id="carouselDescription" class="carousel-description">
+                    <h4>Pink Diamond</h4>
+                    <p>A luxurious fragrance designed to captivate and leave a lasting impression. The Pink Diamond fragrance will make you feel elegant and sophisticated, perfect for any special occasion.</p>
+                    <h4>Isara</h4>
+                    <p>Isara offers a powerful, long-lasting fragrance with a blend of florals and fruits. Ideal for those who love bold, fresh scents that turn heads wherever they go.</p>
+                    <h4>ONCE</h4>
+                    <p>ONCE is a captivating perfume that enchants with its sweet yet subtle aroma. A blend of florals and vanilla notes will leave you feeling like a true goddess every time you wear it.</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
 
@@ -206,17 +210,6 @@
                 <p>Check out our latest beauty trends and become a part of our community.</p>
                 <a href="contact.html" class="contact-btn">Contact Us</a>
                 <a href="products.html" class="shop-btn">See More Products</a>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Did You Know?</h5>
-                        <p class="card-text">
-                            At Avroy Shlain, becoming a member isn't just about great skincare and beauty products—it's about unlocking the opportunity to earn profits while sharing the products you love! 💄✨
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
