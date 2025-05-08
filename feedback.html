@@ -38,14 +38,14 @@
 
         main {
             position: relative;
-            padding-top: 30px;
-            padding-bottom: 50px;
+            padding-top: 20px;  /* Reduced padding to make it compact */
+            padding-bottom: 30px;  /* Reduced bottom padding */
         }
 
         .form-control, .form-select {
             border-radius: 25px;
-            padding: 15px;
-            font-size: 16px;
+            padding: 12px;  /* Slightly reduced padding for a tighter look */
+            font-size: 14px;  /* Slightly reduced font size */
         }
 
         .contact-btn {
@@ -58,6 +58,8 @@
             transition: 0.3s;
             display: inline-block;
             margin-top: 20px;
+            width: 100%;
+            text-align: center;
         }
 
         .contact-btn:hover {
@@ -73,7 +75,7 @@
         }
 
         .form-container {
-            max-width: 800px;
+            max-width: 600px; /* Reduced width for a more compact form */
             margin: 0 auto;
         }
 
@@ -83,10 +85,22 @@
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             border: none;
+            margin-bottom: 20px; /* Added space between card and form */
         }
 
         .card-body {
-            padding: 30px;
+            padding: 20px;  /* Reduced padding inside card */
+        }
+
+        /* Responsiveness for small screens */
+        @media (max-width: 576px) {
+            .form-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .contact-btn {
+                font-size: 14px; /* Adjusted font size on mobile for better appearance */
+            }
         }
     </style>
 </head>
