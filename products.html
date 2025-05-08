@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Preload Critical Images (optional for the first image) -->
+    <link rel="preload" href="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" as="image">
+
     <style>
         body {
             background-color: #e8f5e9; /* Light green background */
@@ -108,7 +111,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Signup/login</a></li>
@@ -128,17 +131,17 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Men's skin care</h5>
-                        <p class="card-text">Soothing and refreshing .</p>
+                        <p class="card-text">Soothing and refreshing.</p>
                         <p class="text-success fw-bold">$12.99</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" class="product-img">
+                    <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Men's Cologne</h5>
                         <p class="card-text">Masculine fragrance for daily wear.</p>
@@ -148,17 +151,17 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/mens%20fragrance.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/mens%20fragrance.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
-                        <h5 class="card-title">Men's  fragrance</h5>
-                        <p class="card-text">smell like a men!</p>
+                        <h5 class="card-title">Men's fragrance</h5>
+                        <p class="card-text">smell like a man!</p>
                         <p class="text-success fw-bold">$16.99</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/shaving%20cream%20and%20shower%20gel.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/shaving%20cream%20and%20shower%20gel.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Men's Shaving Kit</h5>
                         <p class="card-text">Complete shaving kit for a smooth finish.</p>
@@ -173,7 +176,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/radiance%20skin%20%20care.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/radiance%20skin%20%20care.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Glow Moisturizer</h5>
                         <p class="card-text">Hydrating and nourishing for a radiant look.</p>
@@ -183,7 +186,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/tahlita-night-care-800x800.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/tahlita-night-care-800x800.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Night Cream</h5>
                         <p class="card-text">Restorative cream for your nightly routine.</p>
@@ -193,7 +196,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT_Anti_Wrinkle_Plumping_Day_Cream_SPF_25.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT_Anti_Wrinkle_Plumping_Day_Cream_SPF_25.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Anti-aging Serum</h5>
                         <p class="card-text">Reduces wrinkles and restores youthfulness.</p>
@@ -203,7 +206,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/IMG-20250302-WA0048.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/IMG-20250302-WA0048.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Face Mask</h5>
                         <p class="card-text">Detoxifies and revitalizes the skin.</p>
@@ -218,7 +221,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Awakenings-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Awakenings-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Elegant Perfume</h5>
                         <p class="card-text">Long-lasting floral fragrance.</p>
@@ -228,7 +231,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Royal Essence</h5>
                         <p class="card-text">A luxurious blend of oriental spices.</p>
@@ -238,7 +241,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Coppelia-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Coppelia-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Fresh Breeze</h5>
                         <p class="card-text">A refreshing fragrance for everyday use.</p>
@@ -248,7 +251,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Mystic Oud</h5>
                         <p class="card-text">A deep, earthy fragrance with a hint of oud.</p>
@@ -263,7 +266,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Love-It-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Love-It-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Special Moisturizer</h5>
                         <p class="card-text">Limited-time offer: Buy 1 Get 1 Free!</p>
@@ -273,7 +276,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Discounted Serum</h5>
                         <p class="card-text">Buy 2 Get 1 Free – Limited time only!</p>
@@ -283,7 +286,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Moment-600x600-1.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Moment-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Summer Scent</h5>
                         <p class="card-text">Special offer for the summer season!</p>
@@ -293,23 +296,23 @@
             </div>
             <div class="col-md-3">
                 <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/gift%20set.jpg?raw=true" class="product-img">
+                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/gift%20set.jpg?raw=true" class="product-img" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">Gift Set</h5>
                         <p class="card-text">Perfect for gifting, now with 30% off!</p>
-                        <p class="text-danger fw-bold">$49.99</p>
+                        <p class="text-danger fw-bold">$29.99</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
-    </footer>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Avroy Shlain Cosmetics. All Rights Reserved.</p>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
