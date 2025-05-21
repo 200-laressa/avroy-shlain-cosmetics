@@ -5,37 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avroy Shlain Cosmetics</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         body {
-            background-color: #f4f9f6;
+            background-color: #e8f5e9;
             font-family: "Poppins", sans-serif;
             color: #333;
             padding-top: 20px;
         }
-
         h1, h2 {
             text-align: center;
             font-weight: bold;
             color: #1f9e5f;
         }
-
         .navbar {
             background-color: #1f9e5f !important;
         }
-
         .navbar-brand {
             font-weight: bold;
             color: #fff !important;
         }
-
         .navbar-nav .nav-link {
             color: #fff !important;
             font-weight: 500;
         }
-
         .contact-btn, .shop-btn {
             background: #1f9e5f;
             border-radius: 25px;
@@ -46,23 +39,36 @@
             transition: 0.3s;
             margin-right: 10px;
         }
-
         .contact-btn:hover, .shop-btn:hover {
             background: #178b4e;
         }
-
         .card {
             border-radius: 10px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             border: none;
         }
-
-        .card-title {
-            color: #1f9e5f;
-            font-weight: bold;
+        .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
         }
-
+        .carousel-description {
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .videos-container iframe {
+            width: 48%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -70,162 +76,110 @@
             color: white;
             font-weight: bold;
         }
-
-        .carousel-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: contain;
-            border-radius: 10px;
+        footer .social-icons {
+            margin: 10px 0;
         }
-
-        .carousel-description {
-            padding: 20px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .carousel-description h4 {
-            font-weight: bold;
-            color: #1f9e5f;
-        }
-
-        .videos-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .videos-container iframe {
-            width: 48%;
-            margin-bottom: 15px;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .videos-container iframe {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .carousel-item img {
-                height: 200px;
-            }
-
-            .carousel-description {
-                padding: 10px;
-            }
-        }
-
-        .container {
-            padding-left: 0;
-            padding-right: 0;
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
+<header>
+    <h1>Welcome to Glow with Avroy Shlain Cosmetics!</h1>
+    <h2>True Beauty Shines!</h2>
+</header>
 
-    <header>
-        <h1>Welcome to Glow with Avroy Shlain Cosmetics!</h1>
-        <h2>True Beauty Shines!</h2>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Avroy Shlain</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Avroy Shlain</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="container my-5">
-        <!-- Updated Carousel with Descriptions -->
-        <div id="productCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
-                <!-- Pink Diamond -->
-                <div class="carousel-item active">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
-                        </div>
-                        <div class="col-md-6 carousel-description">
-                            <h4>Pink Diamond</h4>
-                            <p>A luxurious fragrance designed to captivate and leave a lasting impression. The Pink Diamond fragrance will make you feel elegant and sophisticated, perfect for any special occasion.</p>
-                        </div>
+<main class="container my-5">
+    <div id="productCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond">
                     </div>
-                </div>
-
-                <!-- Isara -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="Isara">
-                        </div>
-                        <div class="col-md-6 carousel-description">
-                            <h4>Isara</h4>
-                            <p>Isara offers a powerful, long-lasting fragrance with a blend of florals and fruits. Ideal for those who love bold, fresh scents that turn heads wherever they go.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ONCE -->
-                <div class="carousel-item">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
-                        </div>
-                        <div class="col-md-6 carousel-description">
-                            <h4>ONCE</h4>
-                            <p>ONCE is a captivating perfume that enchants with its sweet yet subtle aroma. A blend of florals and vanilla notes will leave you feeling like a true goddess every time you wear it.</p>
-                        </div>
+                    <div class="col-md-6 carousel-description">
+                        <h4>Pink Diamond</h4>
+                        <p>A luxurious fragrance designed to captivate and leave a lasting impression.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <!-- Videos and Buttons -->
-        <div class="row">
-            <div class="col-md-8">
-                <p>Welcome to our beautiful world of Avroy Shlain! Explore, shop, and glow with confidence.</p>
-                <h4>Featured Fragrances</h4>
-                <div class="videos-container">
-                    <iframe src="https://www.youtube.com/embed/gr4z7uXovlE" title="Miss Coppelia For Her by Avroy Shlain" frameborder="0" allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/kyOvGZcD98o" title="Coppelia Intense Fragrance For Her By Avroy Shlain" frameborder="0" allowfullscreen></iframe>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="Isara">
+                    </div>
+                    <div class="col-md-6 carousel-description">
+                        <h4>Isara</h4>
+                        <p>Isara offers a powerful, long-lasting fragrance with a blend of florals and fruits.</p>
+                    </div>
                 </div>
-                <p>Check out our latest beauty trends and become a part of our community.</p>
-                <a href="contact.html" class="contact-btn">Contact Us</a>
-                <a href="products.html" class="shop-btn">See More Products</a>
+            </div>
+            <div class="carousel-item">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE">
+                    </div>
+                    <div class="col-md-6 carousel-description">
+                        <h4>ONCE</h4>
+                        <p>ONCE is a captivating perfume that enchants with its sweet yet subtle aroma.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p>Explore, shop, and glow with confidence.</p>
+            <h4>Featured Fragrances</h4>
+        </div>
+    </div>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
-    </footer>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+        </a>
+        <a href="https://twitter.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-circled.png" alt="Twitter"/>
+        </a>
+        <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+        </a>
+    </div>
+    <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
