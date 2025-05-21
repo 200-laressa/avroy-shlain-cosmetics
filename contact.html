@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
+    <title>Contact Us | Avroy Shlain</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f4f9f6; /* Light neutral background, matching the theme */
+            background-color: #f4f9f6;
             font-family: "Poppins", sans-serif;
         }
-
         h1, h2 {
             text-align: center;
-            color: #1f9e5f; /* Green color matching other pages */
+            color: #1f9e5f;
             font-weight: bold;
         }
-
         .contact-container {
             background: #ffffff;
             max-width: 500px;
@@ -28,141 +23,122 @@
             border-radius: 15px;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
         }
-
         label {
             font-weight: bold;
-            color: #1f9e5f; /* Green for labels */
+            color: #1f9e5f;
         }
-
         input {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
             border-radius: 10px;
-            border: 1px solid #1f9e5f; /* Green border for inputs */
+            border: 1px solid #1f9e5f;
             outline: none;
         }
-
         input[type="submit"] {
-            background: #1f9e5f; /* Green button */
+            background: #1f9e5f;
             color: white;
             font-weight: bold;
             border: none;
             cursor: pointer;
             transition: 0.3s;
         }
-
         input[type="submit"]:hover {
-            background: #178b4e; /* Darker green on hover */
+            background: #178b4e;
         }
-
         footer {
             position: relative;
             text-align: center;
             padding: 20px;
-            background: #1f9e5f; /* Footer in green */
+            background: #1f9e5f;
             color: white;
             font-weight: bold;
             margin-top: 30px;
         }
-
-        /* Navbar adjustments to match the color scheme */
         .navbar {
-            background-color: #1f9e5f !important; /* Matching the navbar with the theme */
+            background-color: #1f9e5f !important;
         }
-
         .navbar-brand, .nav-link {
             color: white !important;
             font-weight: bold;
         }
-
         .nav-link:hover {
-            color: #f4f9f6 !important; /* Light hover color for nav links */
+            color: #f4f9f6 !important;
         }
-
-        /* Links in the form with consistent green */
-        a {
-            color: #1f9e5f;
-            font-weight: bold;
+        .social-icons {
+            margin: 10px 0;
         }
-
-        a:hover {
-            color: #178b4e; /* Darker green on hover for links */
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
         }
-
     </style>
 </head>
-
 <body>
+<header class="text-center py-3">
+    <h1>Contact Us</h1>
+</header>
 
-    <header class="text-center py-3">
-        <h1>Contact Us</h1>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Avroy Shlain!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup/login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Avroy Shlain!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+            </ul>
         </div>
-    </nav>
-
-    <div class="contact-container">
-        <h2>Let's Connect!</h2>
-        <p class="text-center">Feel free to email us at <a href="mailto:motontolaressa@gmail.com">motontolaressa@gmail.com</a>.</p>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name"> <br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email"> <br><br>
-
-            <input type="submit" value="Send Message">
-        </form>
     </div>
+</nav>
 
-    <footer>
-        <p>&copy; 2025 Laressa Motonto</p>
-    </footer>
+<div class="contact-container">
+    <h2>Let's Connect!</h2>
+    <p class="text-center">Feel free to email us at <a href="mailto:motontolaressa@gmail.com">motontolaressa@gmail.com</a>.</p>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input type="submit" value="Send Message">
+    </form>
+</div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+        </a>
+        <a href="https://twitter.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-circled.png" alt="Twitter"/>
+        </a>
+        <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+        </a>
+    </div>
+    <p>&copy; 2025 Laressa Motonto</p>
+</footer>
 
-    <!-- Custom JavaScript -->
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Get the input values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-
-            // Simple validation
-            if (name === "" || email === "") {
-                alert('Please fill out all fields.');
-                return;
-            }
-
-            // Simple success message
-            alert('Message sent successfully! 🎉 Thank you, ' + name + '.');
-
-            // Redirect to the About Us page after successful submission
-            window.location.href = "about.html";  // Redirect to About page
-        });
-    </script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        if (name === "" || email === "") {
+            alert('Please fill out all fields.');
+            return;
+        }
+        alert('Message sent successfully! 🎉 Thank you, ' + name + '.');
+        window.location.href = "about.html";  // Redirect to About page
+    });
+</script>
 </body>
-
 </html>
