@@ -9,21 +9,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    /* Neutral and Clean Theme */
     body {
-      background-color: #f4f9f6; /* Light neutral background for consistency */
+      background-color: #f4f9f6;
       font-family: "Poppins", sans-serif;
-      color: #333; /* Dark grey for text */
+      color: #333;
+      margin: 0;
     }
 
     h1, h2 {
       text-align: center;
       font-weight: bold;
-      color: #1f9e5f; /* Matching green for consistency */
+      color: #1f9e5f;
     }
 
     .navbar {
-      background-color: #1f9e5f !important; /* Matching green navbar */
+      background-color: #1f9e5f !important;
     }
 
     .navbar-brand {
@@ -38,11 +38,9 @@
 
     main {
       position: relative;
-      padding-top: 20px;
-      padding-bottom: 30px;
+      padding: 20px 0;
     }
 
-    /* Adjustments for form inputs */
     .form-control, .form-select {
       border-radius: 25px;
       padding: 12px;
@@ -50,7 +48,7 @@
     }
 
     .contact-btn {
-      background: #1f9e5f; /* Green button for consistency */
+      background: #1f9e5f;
       border-radius: 25px;
       padding: 10px 20px;
       text-decoration: none;
@@ -58,33 +56,32 @@
       font-weight: bold;
       transition: 0.3s;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 15px;
       width: 100%;
       text-align: center;
     }
 
     .contact-btn:hover {
-      background: #178b4e; /* Darker green for hover effect */
+      background: #178b4e;
     }
 
     footer {
       text-align: center;
       padding: 10px;
-      background: #1f9e5f;
+      background: #1f9e5f; 
       color: white;
       font-weight: bold;
+      margin-top: 20px;
     }
 
-    /* Reduced form container width and padding */
     .form-container {
-      max-width: 500px; /* Reduced form width for a tighter fit */
-      margin: 0 auto;
-      padding: 0 15px; /* Reduced side padding to minimize space */
+      max-width: 500px;
+      margin: 30px auto; 
+      padding: 0 15px; 
     }
 
-    /* Reduced margins around form elements */
     .form-container .mb-3 {
-      margin-bottom: 15px; /* Reduced space between form elements */
+      margin-bottom: 15px; 
     }
 
     .card {
@@ -99,12 +96,19 @@
       padding: 20px;
     }
 
-    /* Responsiveness for small screens */
+    .social-icons {
+      margin: 10px 0;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px; /* Adjust margins for spacing */
+    }
+    .social-icons img {
+      width: 25px;
+      height: 25px;
+    }
+
     @media (max-width: 576px) {
-      .form-container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
       .contact-btn {
         font-size: 14px;
       }
@@ -128,9 +132,9 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
         </ul>
       </div>
@@ -143,8 +147,6 @@
         <div class="card-body">
           <h3>Share Your Thoughts</h3>
           <p>We would love to hear about your experience with our products. Please provide your feedback below:</p>
-
-          <!-- Feedback Form -->
           <form action="thank-you.html" method="GET">
             <div class="mb-3">
               <label for="name" class="form-label">Full Name</label>
@@ -180,12 +182,25 @@
   </main>
 
   <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+      </a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-circled.png" alt="Twitter"/>
+      </a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+      </a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest.png" alt="Pinterest"/>
+      </a>
+    </div>
+    <p>Follow us for more updates!</p>
     <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
 </body>
 </html>
