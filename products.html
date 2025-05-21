@@ -4,43 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Glow with Avroy Shlain</title>
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Preload Critical Images (optional for the first image) -->
-    <link rel="preload" href="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" as="image">
-
     <style>
         body {
             background-color: #e8f5e9; /* Light green background */
             font-family: "Poppins", sans-serif;
         }
-
         .navbar {
-            background-color: #4caf50 !important; /* Green */
+            background-color: #1f9e5f !important;
         }
-
         .navbar-brand, .nav-link {
             color: white !important;
             font-weight: bold;
         }
-
         .page-title {
             text-align: center;
             color: #2e7d32; /* Dark green */
             font-weight: bold;
             margin-top: 20px;
         }
-
         .category-title {
             color: #388e3c; /* Dark green */
             font-weight: bold;
             margin-top: 30px;
-            border-bottom: 3px solid #4caf50;
+            border-bottom: 3px solid #1f9e5f; /* Divider color */
             padding-bottom: 5px;
         }
-
         .product-card {
             background: white;
             border-radius: 10px;
@@ -49,270 +38,248 @@
             padding: 10px;
             text-align: center;
         }
-
         .product-card:hover {
             transform: scale(1.05);
         }
-
         .product-img {
             width: 100%;
             height: auto;
-            max-height: 200px; /* Limit image height */
-            object-fit: cover; /* Make sure the image fits inside the container */
+            max-height: 200px;
+            object-fit: cover;
             border-radius: 10px;
         }
-
         .footer {
             text-align: center;
             padding: 10px;
-            background: #4caf50;
+            background: #1f9e5f;
             color: white;
             font-weight: bold;
             margin-top: 20px;
         }
-
-        /* Card size adjustments */
-        .card-body {
-            padding: 15px;
+        .social-icons {
+            margin: 10px 0;
         }
-
-        /* Making cards responsive */
-        .row {
-            margin-top: 20px;
-        }
-
-        .col-md-3 {
-            margin-bottom: 20px; /* Add spacing between product cards */
-        }
-
-        @media (max-width: 768px) {
-            .col-md-3 {
-                max-width: 50%;
-                flex: 0 0 50%;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .col-md-3 {
-                max-width: 100%;
-                flex: 0 0 100%;
-            }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Avroy Shlain!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Signup/login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Avroy Shlain!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+                <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Products Section -->
-    <div class="container my-5">
-        <h2 class="page-title">Our Products</h2>
+<div class="container my-5">
+    <h2 class="page-title">Our Products</h2>
 
-        <!-- Men’s Products -->
-        <h3 class="category-title">Men’s Products</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Men's skin care</h5>
-                        <p class="card-text">Soothing and refreshing.</p>
-                        <p class="text-success fw-bold">$12.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Men's Cologne</h5>
-                        <p class="card-text">Masculine fragrance for daily wear.</p>
-                        <p class="text-success fw-bold">$24.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/mens%20fragrance.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Men's fragrance</h5>
-                        <p class="card-text">smell like a man!</p>
-                        <p class="text-success fw-bold">$16.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/shaving%20cream%20and%20shower%20gel.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Men's Shaving Kit</h5>
-                        <p class="card-text">Complete shaving kit for a smooth finish.</p>
-                        <p class="text-success fw-bold">$39.99</p>
-                    </div>
+    <h3 class="category-title">Men’s Products</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/men%20skin%20care.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Men's Skin Care</h5>
+                    <p class="card-text">Soothing and refreshing.</p>
+                    <p class="text-success fw-bold">$12.99</p>
                 </div>
             </div>
         </div>
-
-        <!-- Women’s Skincare -->
-        <h3 class="category-title">Skincare for Women</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/radiance%20skin%20%20care.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Glow Moisturizer</h5>
-                        <p class="card-text">Hydrating and nourishing for a radiant look.</p>
-                        <p class="text-success fw-bold">$19.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/tahlita-night-care-800x800.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Night Cream</h5>
-                        <p class="card-text">Restorative cream for your nightly routine.</p>
-                        <p class="text-success fw-bold">$29.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT_Anti_Wrinkle_Plumping_Day_Cream_SPF_25.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Anti-aging Serum</h5>
-                        <p class="card-text">Reduces wrinkles and restores youthfulness.</p>
-                        <p class="text-success fw-bold">$39.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/IMG-20250302-WA0048.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Face Mask</h5>
-                        <p class="card-text">Detoxifies and revitalizes the skin.</p>
-                        <p class="text-success fw-bold">$14.99</p>
-                    </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Men's Cologne</h5>
+                    <p class="card-text">Masculine fragrance for daily wear.</p>
+                    <p class="text-success fw-bold">$24.99</p>
                 </div>
             </div>
         </div>
-
-        <!-- Fragrances -->
-        <h3 class="category-title">Fragrances</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Awakenings-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Elegant Perfume</h5>
-                        <p class="card-text">Long-lasting floral fragrance.</p>
-                        <p class="text-success fw-bold">$29.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Royal Essence</h5>
-                        <p class="card-text">A luxurious blend of oriental spices.</p>
-                        <p class="text-success fw-bold">$49.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Coppelia-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Fresh Breeze</h5>
-                        <p class="card-text">A refreshing fragrance for everyday use.</p>
-                        <p class="text-success fw-bold">$19.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Mystic Oud</h5>
-                        <p class="card-text">A deep, earthy fragrance with a hint of oud.</p>
-                        <p class="text-success fw-bold">$39.99</p>
-                    </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/mens%20fragrance.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Men's Fragrance</h5>
+                    <p class="card-text">Smell like a man!</p>
+                    <p class="text-success fw-bold">$16.99</p>
                 </div>
             </div>
         </div>
-
-        <!-- On Promotion -->
-        <h3 class="category-title">On Promotion</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Love-It-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Special Moisturizer</h5>
-                        <p class="card-text">Limited-time offer: Buy 1 Get 1 Free!</p>
-                        <p class="text-danger fw-bold">$15.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Discounted Serum</h5>
-                        <p class="card-text">Buy 2 Get 1 Free – Limited time only!</p>
-                        <p class="text-danger fw-bold">$19.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Moment-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Summer Scent</h5>
-                        <p class="card-text">Special offer for the summer season!</p>
-                        <p class="text-danger fw-bold">$12.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card product-card">
-                    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/gift%20set.jpg?raw=true" class="product-img" loading="lazy">
-                    <div class="card-body">
-                        <h5 class="card-title">Gift Set</h5>
-                        <p class="card-text">Perfect for gifting, now with 30% off!</p>
-                        <p class="text-danger fw-bold">$29.99</p>
-                    </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/shaving%20cream%20and%20shower%20gel.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Men's Shaving Kit</h5>
+                    <p class="card-text">Complete shaving kit for a smooth finish.</p>
+                    <p class="text-success fw-bold">$39.99</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2025 Avroy Shlain Cosmetics. All Rights Reserved.</p>
+    <h3 class="category-title">Skincare for Women</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/radiance%20skin%20%20care.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Glow Moisturizer</h5>
+                    <p class="card-text">Hydrating and nourishing for a radiant look.</p>
+                    <p class="text-success fw-bold">$19.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/tahlita-night-care-800x800.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Night Cream</h5>
+                    <p class="card-text">Restorative cream for your nightly routine.</p>
+                    <p class="text-success fw-bold">$29.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT_Anti_Wrinkle_Plumping_Day_Cream_SPF_25.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Anti-aging Serum</h5>
+                    <p class="card-text">Reduces wrinkles and restores youthfulness.</p>
+                    <p class="text-success fw-bold">$39.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/IMG-20250302-WA0048.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Face Mask</h5>
+                    <p class="card-text">Detoxifies and revitalizes the skin.</p>
+                    <p class="text-success fw-bold">$14.99</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <h3 class="category-title">Fragrances</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Awakenings-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Elegant Perfume</h5>
+                    <p class="card-text">Long-lasting floral fragrance.</p>
+                    <p class="text-success fw-bold">$29.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Royal Essence</h5>
+                    <p class="card-text">A luxurious blend of oriental spices.</p>
+                    <p class="text-success fw-bold">$49.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Coppelia-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh Breeze</h5>
+                    <p class="card-text">A refreshing fragrance for everyday use.</p>
+                    <p class="text-success fw-bold">$19.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Mystic Oud</h5>
+                    <p class="card-text">A deep, earthy fragrance with a hint of oud.</p>
+                    <p class="text-success fw-bold">$39.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="category-title">On Promotion</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Love-It-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Special Moisturizer</h5>
+                    <p class="card-text">Limited-time offer: Buy 1 Get 1 Free!</p>
+                    <p class="text-danger fw-bold">$15.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/CRT-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Discounted Serum</h5>
+                    <p class="card-text">Buy 2 Get 1 Free – Limited time only!</p>
+                    <p class="text-danger fw-bold">$19.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Moment-600x600-1.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Summer Scent</h5>
+                    <p class="card-text">Special offer for the summer season!</p>
+                    <p class="text-danger fw-bold">$12.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card product-card">
+                <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/gift%20set.jpg?raw=true" class="product-img" loading="lazy">
+                <div class="card-body">
+                    <h5 class="card-title">Gift Set</h5>
+                    <p class="card-text">Perfect for gifting, now with 30% off!</p>
+                    <p class="text-danger fw-bold">$29.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+        </a>
+        <a href="https://twitter.com/AvroyShlain" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-circled.png" alt="Twitter"/>
+        </a>
+        <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+        </a>
+    </div>
+    <p>&copy; 2025 Avroy Shlain Cosmetics. All Rights Reserved.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
