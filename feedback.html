@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - Avroy Shlain Cosmetics</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f4f9f6; /* Light neutral background */
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      margin: 0; /* Remove default margin */
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-weight: bold;
+      color: #1f9e5f; /* Matching green */
+    }
+
+    .navbar {
+      background-color: #1f9e5f !important; /* Matching green navbar */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    main {
+      position: relative;
+      padding: 20px 0; /* Top and bottom padding */
+    }
+
+    .form-control, .form-select {
+      border-radius: 25px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .contact-btn {
+      background: #1f9e5f; /* Button color for consistency */
+      border-radius: 25px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 15px; /* Less margin */
+      width: 100%;
+      text-align: center;
+    }
+
+    .contact-btn:hover {
+      background: #178b4e; /* Darker green on hover */
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #1f9e5f; /* Footer color */
+      color: white;
+      font-weight: bold;
+      margin-top: 20px; /* Reduced margin */
+    }
+
+    .form-container {
+      max-width: 500px; /* Form width */
+      margin: 30px auto; /* Centered with small vertical margin */
+      padding: 0 15px; /* Padding */
+    }
+
+    .form-container .mb-3 {
+      margin-bottom: 15px; /* Space between form elements */
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: none;
+      margin-bottom: 20px; /* Spacing below the card */
+    }
+
+    .card-body {
+      padding: 20px; /* Padding in the card */
+    }
+
+    .social-icons {
+      margin: 10px 0; /* Spacing for social icons */
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-icons img {
+      width: 25px; /* Size of icons */
+      height: 25px; /* Size of icons */
+    }
+
+    @media (max-width: 576px) {
+      .contact-btn {
+        font-size: 14px; /* Font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>We Value Your Feedback!</h1>
+    <h2>Your opinion helps us improve and serve you better.</h2>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Avroy Shlain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="form-container">
+      <div class="card">
+        <div class="card-body">
+          <h3>Share Your Thoughts</h3>
+          <p>We would love to hear about your experience with our products. Please provide your feedback below:</p>
+          <form action="thank-you.html" method="GET">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="product" class="form-label">Product Purchased</label>
+              <input type="text" class="form-control" id="product" name="product" required />
+            </div>
+            <div class="mb-3">
+              <label for="rating" class="form-label">Rating</label>
+              <select class="form-select" id="rating" name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="feedback" class="form-label">Feedback</label>
+              <textarea class="form-control" id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+      </a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter-circled.png" alt="Twitter"/>
+      </a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+      </a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/pinterest.png" alt="Pinterest"/>
+      </a>
+    </div>
+    <p>Follow us for more updates!</p>
+    <p>&copy; 2025 Avroy Shlain Cosmetics. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
