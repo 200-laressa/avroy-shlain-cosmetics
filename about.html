@@ -27,12 +27,7 @@
       color: var(--grey-dark);
     }
 
-    /* Overlay to improve readability */
-    .overlay {
-      background-color: rgba(245, 245, 220, 0.85); /* semi-transparent beige */
-      min-height: 100vh;
-      padding: 20px;
-    }
+    /* Removed overlay background color */
 
     .navbar {
       background-color: var(--grey-dark) !important;
@@ -56,6 +51,7 @@
     .container {
       max-width: 900px;
       margin-top: 30px;
+      padding: 20px;
     }
 
     h1, h2 {
@@ -75,11 +71,12 @@
     }
 
     .about-content {
-      background: var(--beige);
+      background: rgba(255, 255, 255, 0.85); /* subtle white translucent background */
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin-top: 30px;
+      color: var(--grey-dark);
     }
 
     .about-content ul {
@@ -120,60 +117,58 @@
 </head>
 
 <body>
-  <div class="overlay">
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Avroy Shlain</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- About Section -->
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <h1>About Avroy Shlain</h1>
-
-      <!-- Profile Image -->
-      <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/avroy%20shlain%20profile.jpg?raw=true" alt="Avroy Shlain" class="profile-image" />
-
-      <div class="about-content">
-        <h2>Who We Are</h2>
-        <p>
-          Avroy Shlain is a global leader in skincare, cosmetics, and wellness products, offering high-quality solutions for beauty and self-care. Our mission is to empower individuals through beauty by providing products that help them feel confident and radiant in their skin. With a commitment to sustainability, innovation, and quality, we continue to redefine the beauty industry worldwide.
-        </p>
-
-        <h2>Our Values</h2>
-        <ul>
-          <li><strong>Quality</strong> – We use only the finest ingredients to create premium products.</li>
-          <li><strong>Innovation</strong> – Our products are crafted using the latest technology and research.</li>
-          <li><strong>Sustainability</strong> – We are committed to sustainable practices that protect our planet.</li>
-          <li><strong>Empowerment</strong> – We strive to empower our customers to look and feel their best, every day.</li>
+      <a class="navbar-brand" href="index.html">Avroy Shlain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
         </ul>
-
-        <h2>Our Commitment to You</h2>
-        <p>
-          We understand that beauty is personal, and our team of expert beauty advisors is here to guide you in finding the right products for your skin type, preferences, and needs. Whether you are searching for skincare solutions, the perfect fragrance, or high-quality makeup, Avroy Shlain has everything to help you experience the best version of yourself.
-        </p>
       </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Avroy Shlain Cosmetics</p>
-    </footer>
+  <!-- About Section -->
+  <div class="container">
+    <h1>About Avroy Shlain</h1>
+
+    <!-- Profile Image -->
+    <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/avroy%20shlain%20profile.jpg?raw=true" alt="Avroy Shlain" class="profile-image" />
+
+    <div class="about-content">
+      <h2>Who We Are</h2>
+      <p>
+        Avroy Shlain is a global leader in skincare, cosmetics, and wellness products, offering high-quality solutions for beauty and self-care. Our mission is to empower individuals through beauty by providing products that help them feel confident and radiant in their skin. With a commitment to sustainability, innovation, and quality, we continue to redefine the beauty industry worldwide.
+      </p>
+
+      <h2>Our Values</h2>
+      <ul>
+        <li><strong>Quality</strong> – We use only the finest ingredients to create premium products.</li>
+        <li><strong>Innovation</strong> – Our products are crafted using the latest technology and research.</li>
+        <li><strong>Sustainability</strong> – We are committed to sustainable practices that protect our planet.</li>
+        <li><strong>Empowerment</strong> – We strive to empower our customers to look and feel their best, every day.</li>
+      </ul>
+
+      <h2>Our Commitment to You</h2>
+      <p>
+        We understand that beauty is personal, and our team of expert beauty advisors is here to guide you in finding the right products for your skin type, preferences, and needs. Whether you are searching for skincare solutions, the perfect fragrance, or high-quality makeup, Avroy Shlain has everything to help you experience the best version of yourself.
+      </p>
+    </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Avroy Shlain Cosmetics</p>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
