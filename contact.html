@@ -17,12 +17,17 @@
     }
 
     body {
-      background-color: var(--beige-light);
       font-family: "Poppins", sans-serif;
       color: var(--grey-dark);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      /* Background image added */
+      background-image: url('https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/pexels-marta-dzedyshko-1042863-6341546.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
     }
 
     h1, h2 {
@@ -44,7 +49,8 @@
     }
 
     .contact-container {
-      background: var(--beige);
+      /* Removed background-color */
+      background: rgba(255, 255, 255, 0.85); /* subtle white translucent background for readability */
       max-width: 520px;
       margin: 3rem auto 5rem;
       padding: 2.5rem 3rem;
