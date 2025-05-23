@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Avroy Shlain</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -20,85 +20,179 @@
       background-color: var(--beige-light);
       font-family: "Poppins", sans-serif;
       color: var(--grey-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     h1, h2 {
       text-align: center;
       color: var(--grey-dark);
-      font-weight: bold;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-top: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .contact-container {
       background: var(--beige);
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+      max-width: 520px;
+      margin: 3rem auto 5rem;
+      padding: 2.5rem 3rem;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-container:hover {
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+    }
+
+    p.text-center {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #5a5a5a;
+    }
+
+    a {
+      color: var(--grey-dark);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--grey-medium);
+      border-color: var(--grey-medium);
     }
 
     label {
+      display: block;
       font-weight: 600;
       color: var(--grey-dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
     }
 
     input[type="text"],
     input[type="email"] {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: 1px solid var(--grey-medium);
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: 1.8px solid var(--grey-medium);
+      font-size: 1.1rem;
+      font-weight: 400;
       background-color: #fff;
+      box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.07);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: var(--grey-dark);
+      box-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
+      font-weight: 600;
     }
 
     input[type="submit"] {
       background: var(--grey-dark);
       color: var(--beige-light);
-      font-weight: bold;
+      font-weight: 700;
       border: none;
       cursor: pointer;
       width: 100%;
-      padding: 10px;
-      border-radius: 10px;
-      transition: 0.3s;
+      padding: 14px 0;
+      border-radius: 14px;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
     }
 
     input[type="submit"]:hover {
       background: var(--grey-medium);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       background: var(--grey-dark);
       color: var(--beige);
-      font-weight: bold;
-      margin-top: 30px;
+      font-weight: 600;
+      margin-top: auto;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      user-select: none;
     }
 
+    .social-icons {
+      margin-bottom: 15px;
+    }
+
+    .social-icons a {
+      color: var(--beige);
+      margin: 0 12px;
+      font-size: 26px;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+
+    .social-icons a:hover {
+      color: var(--beige-dark);
+    }
+
+    /* Navbar tweaks to keep your colors consistent */
     .navbar {
       background-color: var(--grey-dark) !important;
     }
 
-    .navbar-brand, .nav-link {
+    .navbar-brand,
+    .nav-link {
       color: var(--beige) !important;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .nav-link:hover {
       color: var(--beige-dark) !important;
     }
 
-    .social-icons {
-      margin: 10px 0;
-    }
+    /* Responsive for smaller screens */
+    @media (max-width: 576px) {
+      .contact-container {
+        margin: 2rem 1rem 4rem;
+        padding: 2rem 2rem;
+        max-width: 100%;
+      }
 
-    .social-icons a {
-      color: var(--beige);
-      margin: 0 10px;
-      font-size: 25px;
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="submit"] {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -128,10 +222,10 @@
   </nav>
 
   <!-- Contact Form -->
-  <div class="contact-container">
+  <div class="contact-container shadow-sm">
     <h2>Let's Connect!</h2>
     <p class="text-center">Feel free to email us at <a href="mailto:motontolaressa@gmail.com">motontolaressa@gmail.com</a>.</p>
-    <form id="contact-form">
+    <form id="contact-form" novalidate>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
@@ -145,10 +239,10 @@
   <!-- Footer -->
   <footer>
     <div class="social-icons">
-      <a href="https://www.facebook.com/AvroyShlain" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/AvroyShlain" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com/avroyshlain/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.pinterest.com/AvroyShlain" target="_blank"><i class="fab fa-pinterest"></i></a>
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
     </div>
     <p>Follow us for more updates!</p>
     <p>&copy; 2025 Laressa Motonto</p>
@@ -159,12 +253,21 @@
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      if (name === "" || email === "") {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!name || !email) {
         alert('Please fill out all fields.');
         return;
       }
+
+      // Basic email format validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
       alert('Message sent successfully! 🎉 Thank you, ' + name + '.');
       window.location.href = "about.html"; // Redirect to About page
     });
