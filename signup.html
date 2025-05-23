@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Signup & Login - Glow with Avroy Shlain</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
   <style>
     :root {
@@ -31,7 +32,8 @@
       background-color: var(--grey-dark) !important;
     }
 
-    .navbar-brand, .nav-link {
+    .navbar-brand,
+    .nav-link {
       color: var(--beige) !important;
       font-weight: bold;
     }
@@ -93,6 +95,21 @@
       font-weight: bold;
       margin-top: 20px;
     }
+
+    .social-icons a {
+      color: var(--beige);
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    .social-icons i {
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover i {
+      color: var(--beige-dark);
+    }
+
   </style>
 </head>
 
@@ -159,8 +176,23 @@
     </div>
   </div>
 
+  <!-- Footer with Social Media Icons -->
   <footer>
     <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank">
+        <i class="fab fa-pinterest-square"></i>
+      </a>
+    </div>
   </footer>
 
   <!-- Bootstrap JS -->
