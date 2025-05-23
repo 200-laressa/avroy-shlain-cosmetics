@@ -1,150 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Avroy Shlain</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            background-color: #f4f9f6;
-            font-family: "Poppins", sans-serif;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #1f9e5f;
-            font-weight: bold;
-        }
-        .contact-container {
-            background: #ffffff;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            font-weight: bold;
-            color: #1f9e5f;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 10px;
-            border: 1px solid #1f9e5f;
-            outline: none;
-        }
-        input[type="submit"] {
-            background: #1f9e5f;
-            color: white;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        input[type="submit"]:hover {
-            background: #178b4e;
-        }
-        footer {
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            background: #1f9e5f;
-            color: white;
-            font-weight: bold;
-            margin-top: 30px;
-        }
-        .navbar {
-            background-color: #1f9e5f !important;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-            font-weight: bold;
-        }
-        .nav-link:hover {
-            color: #f4f9f6 !important;
-        }
-        .social-icons {
-            margin: 10px 0;
-        }
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 25px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Avroy Shlain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <style>
+    :root {
+      --beige-light: #fdf6e3;
+      --beige: #f5f5dc;
+      --beige-dark: #e4dbc3;
+      --grey-dark: #333;
+      --grey-medium: #555;
+    }
+
+    body {
+      background-color: var(--beige-light);
+      font-family: "Poppins", sans-serif;
+      color: var(--grey-dark);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: var(--grey-dark);
+      font-weight: bold;
+    }
+
+    .contact-container {
+      background: var(--beige);
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--grey-dark);
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid var(--grey-medium);
+      background-color: #fff;
+    }
+
+    input[type="submit"] {
+      background: var(--grey-dark);
+      color: var(--beige-light);
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: var(--grey-medium);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--grey-dark);
+      color: var(--beige);
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .navbar {
+      background-color: var(--grey-dark) !important;
+    }
+
+    .navbar-brand, .nav-link {
+      color: var(--beige) !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      color: var(--beige-dark) !important;
+    }
+
+    .social-icons {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      color: var(--beige);
+      margin: 0 10px;
+      font-size: 25px;
+    }
+  </style>
 </head>
 <body>
-<header class="text-center py-3">
+  <header class="text-center py-3">
     <h1>Contact Us</h1>
-</header>
+  </header>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Avroy Shlain!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="index.html">Avroy Shlain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.html">Signup/Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
-<div class="contact-container">
+  <!-- Contact Form -->
+  <div class="contact-container">
     <h2>Let's Connect!</h2>
     <p class="text-center">Feel free to email us at <a href="mailto:motontolaressa@gmail.com">motontolaressa@gmail.com</a>.</p>
     <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-        <input type="submit" value="Send Message">
-    </form>
-</div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
-<footer>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
     <div class="social-icons">
-        <a href="https://www.facebook.com/AvroyShlain" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com/AvroyShlain" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/avroyshlain/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.pinterest.com/AvroyShlain" target="_blank">
-            <i class="fab fa-pinterest"></i>
-        </a>
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank"><i class="fab fa-pinterest"></i></a>
     </div>
     <p>Follow us for more updates!</p>
     <p>&copy; 2025 Laressa Motonto</p>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        if (name === "" || email === "") {
-            alert('Please fill out all fields.');
-            return;
-        }
-        alert('Message sent successfully! 🎉 Thank you, ' + name + '.');
-        window.location.href = "about.html"; // Redirect to About page
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      if (name === "" || email === "") {
+        alert('Please fill out all fields.');
+        return;
+      }
+      alert('Message sent successfully! 🎉 Thank you, ' + name + '.');
+      window.location.href = "about.html"; // Redirect to About page
     });
-</script>
+  </script>
 </body>
 </html>
