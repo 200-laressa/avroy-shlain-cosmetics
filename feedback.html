@@ -10,20 +10,21 @@
 
   <style>
     body {
-      background-color: #f4f9f6; /* Light neutral background */
+      background-color: #f5f5dc; /* beige */
       font-family: "Poppins", sans-serif;
-      color: #333;
-      margin: 0; /* Remove default margin */
+      color: #333333; /* dark grey */
+      margin: 0;
     }
 
     h1, h2 {
       text-align: center;
       font-weight: bold;
-      color: #1f9e5f; /* Matching green */
+      color: #2c2c2c; /* dark grey */
+      margin-top: 20px;
     }
 
     .navbar {
-      background-color: #1f9e5f !important; /* Matching green navbar */
+      background-color: #2c2c2c !important; /* dark grey navbar */
     }
 
     .navbar-brand {
@@ -38,17 +39,29 @@
 
     main {
       position: relative;
-      padding: 20px 0; /* Top and bottom padding */
+      padding: 20px 0;
     }
 
-    .form-control, .form-select {
+    .form-control, .form-select, textarea {
       border-radius: 25px;
       padding: 12px;
       font-size: 14px;
+      border: 1px solid #bfae81; /* beige border */
+      background-color: #fff9e6; /* very light beige */
+      color: #2c2c2c;
+      transition: border-color 0.3s;
+    }
+
+    .form-control:focus, .form-select:focus, textarea:focus {
+      border-color: #a9935a;
+      outline: none;
+      box-shadow: 0 0 5px #bfae81;
+      background-color: #fff;
+      color: #2c2c2c;
     }
 
     .contact-btn {
-      background: #1f9e5f; /* Button color for consistency */
+      background: #2c2c2c; /* dark grey button */
       border-radius: 25px;
       padding: 10px 20px;
       text-decoration: none;
@@ -56,32 +69,30 @@
       font-weight: bold;
       transition: 0.3s;
       display: inline-block;
-      margin-top: 15px; /* Less margin */
+      margin-top: 15px;
       width: 100%;
       text-align: center;
+      border: none;
+      cursor: pointer;
     }
 
     .contact-btn:hover {
-      background: #178b4e; /* Darker green on hover */
+      background: #474747; /* lighter dark grey on hover */
     }
 
     footer {
       text-align: center;
       padding: 10px;
-      background: #1f9e5f; /* Footer color */
+      background: #2c2c2c; /* dark grey footer */
       color: white;
       font-weight: bold;
-      margin-top: 20px; /* Reduced margin */
+      margin-top: 20px;
     }
 
     .form-container {
-      max-width: 500px; /* Form width */
-      margin: 30px auto; /* Centered with small vertical margin */
-      padding: 0 15px; /* Padding */
-    }
-
-    .form-container .mb-3 {
-      margin-bottom: 15px; /* Space between form elements */
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
     .card {
@@ -89,15 +100,17 @@
       box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
       text-align: center;
       border: none;
-      margin-bottom: 20px; /* Spacing below the card */
+      margin-bottom: 20px;
+      background-color: #fff9e6; /* very light beige card background */
     }
 
     .card-body {
-      padding: 20px; /* Padding in the card */
+      padding: 20px;
+      color: #2c2c2c;
     }
 
     .social-icons {
-      margin: 10px 0; /* Spacing for social icons */
+      margin: 10px 0;
     }
 
     .social-icons a {
@@ -107,13 +120,14 @@
     }
 
     .social-icons img {
-      width: 25px; /* Size of icons */
-      height: 25px; /* Size of icons */
+      width: 25px;
+      height: 25px;
+      filter: brightness(0) invert(1); /* Ensure icons are white */
     }
 
     @media (max-width: 576px) {
       .contact-btn {
-        font-size: 14px; /* Font size for smaller screens */
+        font-size: 14px;
       }
     }
   </style>
