@@ -64,6 +64,14 @@
       transform: scale(1.05);
     }
 
+    .card {
+      background-color: var(--beige);
+      border-radius: 10px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: none;
+    }
+
     .carousel-item img {
       width: 100%;
       height: 300px;
@@ -73,7 +81,7 @@
       padding: 10px;
     }
 
-    /* Make product descriptions white */
+    /* White text color for product descriptions */
     .carousel-description {
       animation: fadeInUp 1s ease-out;
       color: white;
@@ -91,36 +99,42 @@
       }
     }
 
-    /* New product grid container */
-    .product-grid {
+    /* New gallery styles */
+    .gallery {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 30px;
       flex-wrap: wrap;
     }
 
-    .product-card {
-      background: rgba(245, 245, 220, 0.85);
-      border-radius: 12px;
-      box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 10px);
+      background-color: rgba(245, 245, 220, 0.8); /* beige-light with transparency */
+      border-radius: 10px;
+      box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+      padding: 10px;
       text-align: center;
-      max-width: 300px;
-      padding: 15px;
-      color: var(--grey-dark);
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-item img {
+      border-radius: 10px;
+      object-fit: contain;
+      max-height: 250px;
+      width: 100%;
+      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
 
-    .product-card:hover {
+    .gallery-item img:hover {
       transform: scale(1.05);
-    }
-
-    .product-card img {
-      border-radius: 10px;
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      margin-bottom: 15px;
+      cursor: pointer;
     }
 
     footer {
@@ -150,15 +164,17 @@
       h1, h2 {
         font-size: 1.5rem;
       }
-      .product-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-      .product-card {
-        max-width: 90%;
-      }
       .carousel-item img {
         height: 200px;
+      }
+      .gallery {
+        flex-direction: column;
+      }
+      .gallery-item {
+        flex: 1 1 100%;
+      }
+      .gallery-item img {
+        max-height: none;
       }
     }
   </style>
@@ -189,39 +205,39 @@
   </div>
 </nav>
 
-<main class="container my-4">
-  <div id="productCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="4000">
+<main class="container my-5">
+  <div id="productCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" alt="Adrenaline">
+            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Pink-Diamond.jpg?raw=true" alt="Pink Diamond" />
           </div>
           <div class="col-md-6 carousel-description">
-            <h4>Adrenaline</h4>
-            <p>An energizing and bold fragrance to awaken your senses and invigorate your day.</p>
+            <h4>Pink Diamond</h4>
+            <p>A luxurious fragrance designed to captivate and leave a lasting impression.</p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" alt="Black Diamond">
+            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Isara-600x600-1.jpg?raw=true" alt="Isara" />
           </div>
           <div class="col-md-6 carousel-description">
-            <h4>Black Diamond</h4>
-            <p>A mysterious and luxurious scent crafted for those who dare to shine differently.</p>
+            <h4>Isara</h4>
+            <p>Isara offers a powerful, long-lasting fragrance with a blend of florals and fruits.</p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Exotic-Fire-600x600-1.jpg?raw=true" alt="Exotic Fire">
+            <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Once-600x600-1.jpg?raw=true" alt="ONCE" />
           </div>
           <div class="col-md-6 carousel-description">
-            <h4>Exotic Fire</h4>
-            <p>A warm and captivating fragrance that sparks passion and mystery.</p>
+            <h4>ONCE</h4>
+            <p>ONCE is a captivating perfume that enchants with its sweet yet subtle aroma.</p>
           </div>
         </div>
       </div>
@@ -236,26 +252,26 @@
     </button>
   </div>
 
-  <!-- New product showcase grid below the carousel -->
-  <section class="product-grid">
-    <div class="product-card">
+  <!-- Gallery section with descriptions -->
+  <div class="gallery">
+    <div class="gallery-item">
       <img src="https://raw.githubusercontent.com/200-laressa/avroy-shlain-cosmetics/refs/heads/main/3dcc2e-adrenaline-avroy-shlain_1200.webp" alt="Adrenaline" />
-      <h5>Adrenaline</h5>
-      <p>An energizing and bold fragrance to awaken your senses and invigorate your day.</p>
+      <h4>Adrenaline</h4>
+      <p>An invigorating fragrance that energizes your senses and awakens your spirit.</p>
     </div>
-    <div class="product-card">
+    <div class="gallery-item">
       <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Balck-Diamond-600x600_.jpg?raw=true" alt="Black Diamond" />
-      <h5>Black Diamond</h5>
-      <p>A mysterious and luxurious scent crafted for those who dare to shine differently.</p>
+      <h4>Black Diamond</h4>
+      <p>A bold, mysterious scent that exudes confidence and elegance.</p>
     </div>
-    <div class="product-card">
+    <div class="gallery-item">
       <img src="https://github.com/200-laressa/avroy-shlain-cosmetics/blob/main/Exotic-Fire-600x600-1.jpg?raw=true" alt="Exotic Fire" />
-      <h5>Exotic Fire</h5>
-      <p>A warm and captivating fragrance that sparks passion and mystery.</p>
+      <h4>Exotic Fire</h4>
+      <p>A warm and spicy fragrance that sparks passion and adventure.</p>
     </div>
-  </section>
+  </div>
 
-  <div class="text-center mt-4">
+  <div class="text-center">
     <a href="contact.html" class="contact-btn">Contact Us</a>
     <a href="products.html" class="shop-btn">See More Products</a>
   </div>
@@ -266,4 +282,13 @@
     <a href="https://www.facebook.com/AvroyShlain" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="https://twitter.com/AvroyShlain" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="https://www.instagram.com/avroyshlain/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.pinterest.com/AvroyShlain" target="_blank"><i class="fab fa-p
+    <a href="https://www.pinterest.com/AvroyShlain" target="_blank"><i class="fab fa-pinterest"></i></a>
+  </div>
+  <p>Follow us for more updates!</p>
+  <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
