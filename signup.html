@@ -17,15 +17,26 @@
       --grey-medium: #555;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: "Poppins", sans-serif;
+      color: var(--grey-dark);
+    }
+
     body {
       background-image: url('https://github.com/200-laressa/avroy-shlain-cosmetics/blob/16bee41e2764488645dc0c08c45bb1348bce04ce/pexels-marta-dzedyshko-1042863-6341546.jpg?raw=true');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      font-family: "Poppins", sans-serif;
-      color: var(--grey-dark);
-      margin: 0;
+    }
+
+    main {
+      flex: 1;
     }
 
     .navbar {
@@ -93,7 +104,6 @@
       background: var(--grey-dark);
       color: var(--beige);
       font-weight: bold;
-      margin-top: 20px;
     }
 
     .social-icons a {
@@ -109,7 +119,6 @@
     .social-icons a:hover i {
       color: var(--beige-dark);
     }
-
   </style>
 </head>
 
@@ -135,63 +144,57 @@
     </div>
   </nav>
 
-  <!-- Signup/Login Section -->
-  <div class="container">
-    <div class="row justify-content-center my-5">
-      <div class="col-md-6">
-        <div class="card">
-          <h2 id="form-title">Create an Account</h2>
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="row justify-content-center my-5">
+        <div class="col-md-6">
+          <div class="card">
+            <h2 id="form-title">Create an Account</h2>
 
-          <form id="auth-form">
-            <div id="name-field" class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" id="name" name="name" class="form-control">
-            </div>
+            <form id="auth-form">
+              <div id="name-field" class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control">
+              </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" id="email" name="email" class="form-control" required>
-            </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
 
-            <div class="mb-3 password-container">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" id="password" name="password" class="form-control" required>
-              <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
-            </div>
+              <div class="mb-3 password-container">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+                <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+              </div>
 
-            <div id="confirm-password-field" class="mb-3 password-container">
-              <label for="confirm-password" class="form-label">Confirm Password</label>
-              <input type="password" id="confirm-password" name="confirm-password" class="form-control">
-              <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
-            </div>
+              <div id="confirm-password-field" class="mb-3 password-container">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-control">
+                <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
+              </div>
 
-            <button type="submit" class="btn btn-custom w-100">Sign Up</button>
-          </form>
+              <button type="submit" class="btn btn-custom w-100">Sign Up</button>
+            </form>
 
-          <p class="mt-3">
-            Already have an account? <a href="#" id="toggle-form">Log In</a>
-          </p>
+            <p class="mt-3">
+              Already have an account? <a href="#" id="toggle-form">Log In</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Footer with Social Media Icons -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Laressa Motonto | Avroy Shlain</p>
     <div class="social-icons">
-      <a href="https://www.facebook.com/AvroyShlain" target="_blank">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a href="https://twitter.com/AvroyShlain" target="_blank">
-        <i class="fab fa-twitter-square"></i>
-      </a>
-      <a href="https://www.instagram.com/avroyshlain/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.pinterest.com/AvroyShlain" target="_blank">
-        <i class="fab fa-pinterest-square"></i>
-      </a>
+      <a href="https://www.facebook.com/AvroyShlain" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://twitter.com/AvroyShlain" target="_blank"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://www.instagram.com/avroyshlain/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.pinterest.com/AvroyShlain" target="_blank"><i class="fab fa-pinterest-square"></i></a>
     </div>
   </footer>
 
